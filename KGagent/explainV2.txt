@@ -25,13 +25,6 @@
   - 变更位置：新增文件 evaluate_graphrag.py
   - 变更原因：建立客观评估标准，便于迭代优化
 
-- 新增配置管理（.env, .env.example, src/config.py 增强）：
-  - 使用 python-dotenv 管理环境变量
-  - 新增 ChromaDB 相关配置项
-  - 新增向量检索 Top-K、图谱路径最大深度等配置
-  - 变更位置：新增文件 .env, .env.example；修改 src/config.py
-  - 变更原因：提升配置灵活性，便于多环境部署
-
 - 新增测试用例文件：
   - test.json：基础测试用例
   - test1.json：增强版测试用例（更难）
@@ -39,7 +32,7 @@
   - 变更原因：为评估框架提供测试数据
 
 - 新增评估结果文件：
-  - eval_result0.json, eval_result_test1.json
+  - eval_result_test.json, eval_result_test1.json
   - 变更位置：新增结果文件
   - 变更原因：记录评估结果，便于对比分析
 
