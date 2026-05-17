@@ -1,0 +1,2902 @@
+[
+  {
+    "id": "kgqa-001",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "万冬儿和邓颖超有什么关系？",
+    "answer": "万冬儿 --(儿子)--> 周恩来 --(妻子)--> 邓颖超",
+    "expected_entities": [
+      "万冬儿",
+      "周恩来",
+      "邓颖超"
+    ],
+    "expected_relations": [
+      "儿子",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "万冬儿",
+        "relation": "儿子",
+        "target": "周恩来"
+      },
+      {
+        "source": "周恩来",
+        "relation": "妻子",
+        "target": "邓颖超"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-002",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明万冬儿和周恩寿之间的两跳关系。",
+    "answer": "万冬儿 --(儿子)--> 周恩来 --(弟弟)--> 周恩寿",
+    "expected_entities": [
+      "万冬儿",
+      "周恩来",
+      "周恩寿"
+    ],
+    "expected_relations": [
+      "儿子",
+      "弟弟"
+    ],
+    "evidence_path": [
+      {
+        "source": "万冬儿",
+        "relation": "儿子",
+        "target": "周恩来"
+      },
+      {
+        "source": "周恩来",
+        "relation": "弟弟",
+        "target": "周恩寿"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-003",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "万冬儿是通过什么路径连接到周恩溥的？",
+    "answer": "万冬儿 --(儿子)--> 周恩来 --(弟弟)--> 周恩溥",
+    "expected_entities": [
+      "万冬儿",
+      "周恩来",
+      "周恩溥"
+    ],
+    "expected_relations": [
+      "儿子",
+      "弟弟"
+    ],
+    "evidence_path": [
+      {
+        "source": "万冬儿",
+        "relation": "儿子",
+        "target": "周恩来"
+      },
+      {
+        "source": "周恩来",
+        "relation": "弟弟",
+        "target": "周恩溥"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-004",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，万冬儿和周劭纲之间有什么关联？",
+    "answer": "万冬儿 --(儿子)--> 周恩来 --(父亲)--> 周劭纲",
+    "expected_entities": [
+      "万冬儿",
+      "周恩来",
+      "周劭纲"
+    ],
+    "expected_relations": [
+      "儿子",
+      "父亲"
+    ],
+    "evidence_path": [
+      {
+        "source": "万冬儿",
+        "relation": "儿子",
+        "target": "周恩来"
+      },
+      {
+        "source": "周恩来",
+        "relation": "父亲",
+        "target": "周劭纲"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-005",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "严信厚与顾维钧之间的关系链是什么？",
+    "answer": "严信厚 --(孙女)--> 严幼韵 --(丈夫)--> 顾维钧",
+    "expected_entities": [
+      "严信厚",
+      "严幼韵",
+      "顾维钧"
+    ],
+    "expected_relations": [
+      "孙女",
+      "丈夫"
+    ],
+    "evidence_path": [
+      {
+        "source": "严信厚",
+        "relation": "孙女",
+        "target": "严幼韵"
+      },
+      {
+        "source": "严幼韵",
+        "relation": "丈夫",
+        "target": "顾维钧"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-006",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出严信厚到杨雪兰的图谱推理路径。",
+    "answer": "严信厚 --(孙女)--> 严幼韵 --(女儿)--> 杨雪兰",
+    "expected_entities": [
+      "严信厚",
+      "严幼韵",
+      "杨雪兰"
+    ],
+    "expected_relations": [
+      "孙女",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "严信厚",
+        "relation": "孙女",
+        "target": "严幼韵"
+      },
+      {
+        "source": "严幼韵",
+        "relation": "女儿",
+        "target": "杨雪兰"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-007",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "严信厚和严彩韵能否通过图谱中的两跳关系关联起来？",
+    "answer": "严信厚 --(孙女)--> 严幼韵 --(姐姐)--> 严彩韵",
+    "expected_entities": [
+      "严信厚",
+      "严幼韵",
+      "严彩韵"
+    ],
+    "expected_relations": [
+      "孙女",
+      "姐姐"
+    ],
+    "evidence_path": [
+      {
+        "source": "严信厚",
+        "relation": "孙女",
+        "target": "严幼韵"
+      },
+      {
+        "source": "严幼韵",
+        "relation": "姐姐",
+        "target": "严彩韵"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-008",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "严信厚和严莲韵之间存在怎样的关系路径？",
+    "answer": "严信厚 --(孙女)--> 严幼韵 --(姐姐)--> 严莲韵",
+    "expected_entities": [
+      "严信厚",
+      "严幼韵",
+      "严莲韵"
+    ],
+    "expected_relations": [
+      "孙女",
+      "姐姐"
+    ],
+    "evidence_path": [
+      {
+        "source": "严信厚",
+        "relation": "孙女",
+        "target": "严幼韵"
+      },
+      {
+        "source": "严幼韵",
+        "relation": "姐姐",
+        "target": "严莲韵"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-009",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "严信厚和严子均有什么关系？",
+    "answer": "严信厚 --(孙女)--> 严幼韵 --(父亲)--> 严子均",
+    "expected_entities": [
+      "严信厚",
+      "严幼韵",
+      "严子均"
+    ],
+    "expected_relations": [
+      "孙女",
+      "父亲"
+    ],
+    "evidence_path": [
+      {
+        "source": "严信厚",
+        "relation": "孙女",
+        "target": "严幼韵"
+      },
+      {
+        "source": "严幼韵",
+        "relation": "父亲",
+        "target": "严子均"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-010",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明严幼韵和顾德昌之间的两跳关系。",
+    "answer": "严幼韵 --(丈夫)--> 顾维钧 --(儿子)--> 顾德昌",
+    "expected_entities": [
+      "严幼韵",
+      "顾维钧",
+      "顾德昌"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "严幼韵",
+        "relation": "丈夫",
+        "target": "顾维钧"
+      },
+      {
+        "source": "顾维钧",
+        "relation": "儿子",
+        "target": "顾德昌"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-011",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "严幼韵是通过什么路径连接到顾福昌的？",
+    "answer": "严幼韵 --(丈夫)--> 顾维钧 --(儿子)--> 顾福昌",
+    "expected_entities": [
+      "严幼韵",
+      "顾维钧",
+      "顾福昌"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "严幼韵",
+        "relation": "丈夫",
+        "target": "顾维钧"
+      },
+      {
+        "source": "顾维钧",
+        "relation": "儿子",
+        "target": "顾福昌"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-012",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，严幼韵和顾裕昌之间有什么关联？",
+    "answer": "严幼韵 --(丈夫)--> 顾维钧 --(儿子)--> 顾裕昌",
+    "expected_entities": [
+      "严幼韵",
+      "顾维钧",
+      "顾裕昌"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "严幼韵",
+        "relation": "丈夫",
+        "target": "顾维钧"
+      },
+      {
+        "source": "顾维钧",
+        "relation": "儿子",
+        "target": "顾裕昌"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-013",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "严幼韵与顾菊珍之间的关系链是什么？",
+    "answer": "严幼韵 --(丈夫)--> 顾维钧 --(女儿)--> 顾菊珍",
+    "expected_entities": [
+      "严幼韵",
+      "顾维钧",
+      "顾菊珍"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "严幼韵",
+        "relation": "丈夫",
+        "target": "顾维钧"
+      },
+      {
+        "source": "顾维钧",
+        "relation": "女儿",
+        "target": "顾菊珍"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-014",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出严幼韵到唐宝玥的图谱推理路径。",
+    "answer": "严幼韵 --(丈夫)--> 顾维钧 --(妻子)--> 唐宝玥",
+    "expected_entities": [
+      "严幼韵",
+      "顾维钧",
+      "唐宝玥"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "严幼韵",
+        "relation": "丈夫",
+        "target": "顾维钧"
+      },
+      {
+        "source": "顾维钧",
+        "relation": "妻子",
+        "target": "唐宝玥"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-015",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "严幼韵和张润娥能否通过图谱中的两跳关系关联起来？",
+    "answer": "严幼韵 --(丈夫)--> 顾维钧 --(妻子)--> 张润娥",
+    "expected_entities": [
+      "严幼韵",
+      "顾维钧",
+      "张润娥"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "严幼韵",
+        "relation": "丈夫",
+        "target": "顾维钧"
+      },
+      {
+        "source": "顾维钧",
+        "relation": "妻子",
+        "target": "张润娥"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-016",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "严幼韵和黄蕙兰之间存在怎样的关系路径？",
+    "answer": "严幼韵 --(丈夫)--> 顾维钧 --(妻子)--> 黄蕙兰",
+    "expected_entities": [
+      "严幼韵",
+      "顾维钧",
+      "黄蕙兰"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "严幼韵",
+        "relation": "丈夫",
+        "target": "顾维钧"
+      },
+      {
+        "source": "顾维钧",
+        "relation": "妻子",
+        "target": "黄蕙兰"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-017",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "任弼时和任远远有什么关系？",
+    "answer": "任弼时 --(妻子)--> 陈琮英 --(儿子)--> 任远远",
+    "expected_entities": [
+      "任弼时",
+      "陈琮英",
+      "任远远"
+    ],
+    "expected_relations": [
+      "妻子",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "任弼时",
+        "relation": "妻子",
+        "target": "陈琮英"
+      },
+      {
+        "source": "陈琮英",
+        "relation": "儿子",
+        "target": "任远远"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-018",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明任弼时和陈达邦之间的两跳关系。",
+    "answer": "任弼时 --(妻子)--> 陈琮英 --(哥哥)--> 陈达邦",
+    "expected_entities": [
+      "任弼时",
+      "陈琮英",
+      "陈达邦"
+    ],
+    "expected_relations": [
+      "妻子",
+      "哥哥"
+    ],
+    "evidence_path": [
+      {
+        "source": "任弼时",
+        "relation": "妻子",
+        "target": "陈琮英"
+      },
+      {
+        "source": "陈琮英",
+        "relation": "哥哥",
+        "target": "陈达邦"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-019",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "任弼时是通过什么路径连接到任远征的？",
+    "answer": "任弼时 --(妻子)--> 陈琮英 --(女儿)--> 任远征",
+    "expected_entities": [
+      "任弼时",
+      "陈琮英",
+      "任远征"
+    ],
+    "expected_relations": [
+      "妻子",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "任弼时",
+        "relation": "妻子",
+        "target": "陈琮英"
+      },
+      {
+        "source": "陈琮英",
+        "relation": "女儿",
+        "target": "任远征"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-020",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，任弼时和任远志之间有什么关联？",
+    "answer": "任弼时 --(妻子)--> 陈琮英 --(女儿)--> 任远志",
+    "expected_entities": [
+      "任弼时",
+      "陈琮英",
+      "任远志"
+    ],
+    "expected_relations": [
+      "妻子",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "任弼时",
+        "relation": "妻子",
+        "target": "陈琮英"
+      },
+      {
+        "source": "陈琮英",
+        "relation": "女儿",
+        "target": "任远志"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-021",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "任弼时与任远芳之间的关系链是什么？",
+    "answer": "任弼时 --(妻子)--> 陈琮英 --(女儿)--> 任远芳",
+    "expected_entities": [
+      "任弼时",
+      "陈琮英",
+      "任远芳"
+    ],
+    "expected_relations": [
+      "妻子",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "任弼时",
+        "relation": "妻子",
+        "target": "陈琮英"
+      },
+      {
+        "source": "陈琮英",
+        "relation": "女儿",
+        "target": "任远芳"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-022",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出伍若兰到赵力平的图谱推理路径。",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(儿媳)--> 赵力平",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "赵力平"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "儿媳"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "儿媳",
+        "target": "赵力平"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-023",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰和朱琦能否通过图谱中的两跳关系关联起来？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(儿子)--> 朱琦",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "朱琦"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "儿子",
+        "target": "朱琦"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-024",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰和朱敏之间存在怎样的关系路径？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(女儿)--> 朱敏",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "朱敏"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "女儿",
+        "target": "朱敏"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-025",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰和刘铮有什么关系？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(女婿)--> 刘铮",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "刘铮"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "女婿"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "女婿",
+        "target": "刘铮"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-026",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明伍若兰和刘从珍之间的两跳关系。",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 刘从珍",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "刘从珍"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "刘从珍"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-027",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰是通过什么路径连接到康克清的？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 康克清",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "康克清"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "康克清"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-028",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，伍若兰和萧菊芳之间有什么关联？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 萧菊芳",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "萧菊芳"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "萧菊芳"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-029",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰与贺治华之间的关系链是什么？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 贺治华",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "贺治华"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "贺治华"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-030",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出伍若兰到陈玉珍的图谱推理路径。",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 陈玉珍",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "陈玉珍"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "陈玉珍"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-031",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰和朱新华能否通过图谱中的两跳关系关联起来？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(孙女)--> 朱新华",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "朱新华"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "孙女"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "孙女",
+        "target": "朱新华"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-032",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰和朱全华之间存在怎样的关系路径？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(孙子)--> 朱全华",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "朱全华"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "孙子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "孙子",
+        "target": "朱全华"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-033",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰和朱和平有什么关系？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(孙子)--> 朱和平",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "朱和平"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "孙子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "孙子",
+        "target": "朱和平"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-034",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明伍若兰和朱援朝之间的两跳关系。",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(孙子)--> 朱援朝",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "朱援朝"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "孙子"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "孙子",
+        "target": "朱援朝"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-035",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰是通过什么路径连接到刘伯承的？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(战友)--> 刘伯承",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "刘伯承"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "战友",
+        "target": "刘伯承"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-036",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，伍若兰和朱良才之间有什么关联？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(战友)--> 朱良才",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "朱良才"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "战友",
+        "target": "朱良才"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-037",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "伍若兰与粟裕之间的关系链是什么？",
+    "answer": "伍若兰 --(丈夫)--> 朱德 --(战友)--> 粟裕",
+    "expected_entities": [
+      "伍若兰",
+      "朱德",
+      "粟裕"
+    ],
+    "expected_relations": [
+      "丈夫",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "伍若兰",
+        "relation": "丈夫",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "战友",
+        "target": "粟裕"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-038",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出傅秋涛到叶华明的图谱推理路径。",
+    "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶华明",
+    "expected_entities": [
+      "傅秋涛",
+      "叶挺",
+      "叶华明"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅秋涛",
+        "relation": "战友",
+        "target": "叶挺"
+      },
+      {
+        "source": "叶挺",
+        "relation": "儿子",
+        "target": "叶华明"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-039",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅秋涛和叶启光能否通过图谱中的两跳关系关联起来？",
+    "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶启光",
+    "expected_entities": [
+      "傅秋涛",
+      "叶挺",
+      "叶启光"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅秋涛",
+        "relation": "战友",
+        "target": "叶挺"
+      },
+      {
+        "source": "叶挺",
+        "relation": "儿子",
+        "target": "叶启光"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-040",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅秋涛和叶正光之间存在怎样的关系路径？",
+    "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶正光",
+    "expected_entities": [
+      "傅秋涛",
+      "叶挺",
+      "叶正光"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅秋涛",
+        "relation": "战友",
+        "target": "叶挺"
+      },
+      {
+        "source": "叶挺",
+        "relation": "儿子",
+        "target": "叶正光"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-041",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅秋涛和叶正大有什么关系？",
+    "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶正大",
+    "expected_entities": [
+      "傅秋涛",
+      "叶挺",
+      "叶正大"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅秋涛",
+        "relation": "战友",
+        "target": "叶挺"
+      },
+      {
+        "source": "叶挺",
+        "relation": "儿子",
+        "target": "叶正大"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-042",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明傅秋涛和叶正明之间的两跳关系。",
+    "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶正明",
+    "expected_entities": [
+      "傅秋涛",
+      "叶挺",
+      "叶正明"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅秋涛",
+        "relation": "战友",
+        "target": "叶挺"
+      },
+      {
+        "source": "叶挺",
+        "relation": "儿子",
+        "target": "叶正明"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-043",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅秋涛是通过什么路径连接到叶大鹰的？",
+    "answer": "傅秋涛 --(战友)--> 叶挺 --(孙子)--> 叶大鹰",
+    "expected_entities": [
+      "傅秋涛",
+      "叶挺",
+      "叶大鹰"
+    ],
+    "expected_relations": [
+      "战友",
+      "孙子"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅秋涛",
+        "relation": "战友",
+        "target": "叶挺"
+      },
+      {
+        "source": "叶挺",
+        "relation": "孙子",
+        "target": "叶大鹰"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-044",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，傅秋涛和赵一曼之间有什么关联？",
+    "answer": "傅秋涛 --(战友)--> 叶挺 --(战友)--> 赵一曼",
+    "expected_entities": [
+      "傅秋涛",
+      "叶挺",
+      "赵一曼"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅秋涛",
+        "relation": "战友",
+        "target": "叶挺"
+      },
+      {
+        "source": "叶挺",
+        "relation": "战友",
+        "target": "赵一曼"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-045",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅雷与夏伊乔之间的关系链是什么？",
+    "answer": "傅雷 --(好友)--> 刘海粟 --(妻子)--> 夏伊乔",
+    "expected_entities": [
+      "傅雷",
+      "刘海粟",
+      "夏伊乔"
+    ],
+    "expected_relations": [
+      "好友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅雷",
+        "relation": "好友",
+        "target": "刘海粟"
+      },
+      {
+        "source": "刘海粟",
+        "relation": "妻子",
+        "target": "夏伊乔"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-046",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出傅雷到刘玉范的图谱推理路径。",
+    "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 刘玉范",
+    "expected_entities": [
+      "傅雷",
+      "刘海粟",
+      "刘玉范"
+    ],
+    "expected_relations": [
+      "好友",
+      "学生"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅雷",
+        "relation": "好友",
+        "target": "刘海粟"
+      },
+      {
+        "source": "刘海粟",
+        "relation": "学生",
+        "target": "刘玉范"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-047",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅雷和姜国华能否通过图谱中的两跳关系关联起来？",
+    "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 姜国华",
+    "expected_entities": [
+      "傅雷",
+      "刘海粟",
+      "姜国华"
+    ],
+    "expected_relations": [
+      "好友",
+      "学生"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅雷",
+        "relation": "好友",
+        "target": "刘海粟"
+      },
+      {
+        "source": "刘海粟",
+        "relation": "学生",
+        "target": "姜国华"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-048",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅雷和张旭云之间存在怎样的关系路径？",
+    "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 张旭云",
+    "expected_entities": [
+      "傅雷",
+      "刘海粟",
+      "张旭云"
+    ],
+    "expected_relations": [
+      "好友",
+      "学生"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅雷",
+        "relation": "好友",
+        "target": "刘海粟"
+      },
+      {
+        "source": "刘海粟",
+        "relation": "学生",
+        "target": "张旭云"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-049",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅雷和潘玉良有什么关系？",
+    "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 潘玉良",
+    "expected_entities": [
+      "傅雷",
+      "刘海粟",
+      "潘玉良"
+    ],
+    "expected_relations": [
+      "好友",
+      "学生"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅雷",
+        "relation": "好友",
+        "target": "刘海粟"
+      },
+      {
+        "source": "刘海粟",
+        "relation": "学生",
+        "target": "潘玉良"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-050",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明傅雷和陆小曼之间的两跳关系。",
+    "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 陆小曼",
+    "expected_entities": [
+      "傅雷",
+      "刘海粟",
+      "陆小曼"
+    ],
+    "expected_relations": [
+      "好友",
+      "学生"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅雷",
+        "relation": "好友",
+        "target": "刘海粟"
+      },
+      {
+        "source": "刘海粟",
+        "relation": "学生",
+        "target": "陆小曼"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-051",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "傅雷是通过什么路径连接到黄丽敏的？",
+    "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 黄丽敏",
+    "expected_entities": [
+      "傅雷",
+      "刘海粟",
+      "黄丽敏"
+    ],
+    "expected_relations": [
+      "好友",
+      "学生"
+    ],
+    "evidence_path": [
+      {
+        "source": "傅雷",
+        "relation": "好友",
+        "target": "刘海粟"
+      },
+      {
+        "source": "刘海粟",
+        "relation": "学生",
+        "target": "黄丽敏"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-052",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，关山月和宋铭黄之间有什么关联？",
+    "answer": "关山月 --(老师)--> 高剑父 --(妻子)--> 宋铭黄",
+    "expected_entities": [
+      "关山月",
+      "高剑父",
+      "宋铭黄"
+    ],
+    "expected_relations": [
+      "老师",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "关山月",
+        "relation": "老师",
+        "target": "高剑父"
+      },
+      {
+        "source": "高剑父",
+        "relation": "妻子",
+        "target": "宋铭黄"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-053",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "关山月与杨之光之间的关系链是什么？",
+    "answer": "关山月 --(老师)--> 高剑父 --(学生)--> 杨之光",
+    "expected_entities": [
+      "关山月",
+      "高剑父",
+      "杨之光"
+    ],
+    "expected_relations": [
+      "老师",
+      "学生"
+    ],
+    "evidence_path": [
+      {
+        "source": "关山月",
+        "relation": "老师",
+        "target": "高剑父"
+      },
+      {
+        "source": "高剑父",
+        "relation": "学生",
+        "target": "杨之光"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-054",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出关山月到黎雄才的图谱推理路径。",
+    "answer": "关山月 --(老师)--> 高剑父 --(学生)--> 黎雄才",
+    "expected_entities": [
+      "关山月",
+      "高剑父",
+      "黎雄才"
+    ],
+    "expected_relations": [
+      "老师",
+      "学生"
+    ],
+    "evidence_path": [
+      {
+        "source": "关山月",
+        "relation": "老师",
+        "target": "高剑父"
+      },
+      {
+        "source": "高剑父",
+        "relation": "学生",
+        "target": "黎雄才"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-055",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "关山月和高剑僧能否通过图谱中的两跳关系关联起来？",
+    "answer": "关山月 --(老师)--> 高剑父 --(弟弟)--> 高剑僧",
+    "expected_entities": [
+      "关山月",
+      "高剑父",
+      "高剑僧"
+    ],
+    "expected_relations": [
+      "老师",
+      "弟弟"
+    ],
+    "evidence_path": [
+      {
+        "source": "关山月",
+        "relation": "老师",
+        "target": "高剑父"
+      },
+      {
+        "source": "高剑父",
+        "relation": "弟弟",
+        "target": "高剑僧"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-056",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "关山月和高奇峰之间存在怎样的关系路径？",
+    "answer": "关山月 --(老师)--> 高剑父 --(弟弟)--> 高奇峰",
+    "expected_entities": [
+      "关山月",
+      "高剑父",
+      "高奇峰"
+    ],
+    "expected_relations": [
+      "老师",
+      "弟弟"
+    ],
+    "evidence_path": [
+      {
+        "source": "关山月",
+        "relation": "老师",
+        "target": "高剑父"
+      },
+      {
+        "source": "高剑父",
+        "relation": "弟弟",
+        "target": "高奇峰"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-057",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "关山月和居廉有什么关系？",
+    "answer": "关山月 --(老师)--> 高剑父 --(老师)--> 居廉",
+    "expected_entities": [
+      "关山月",
+      "高剑父",
+      "居廉"
+    ],
+    "expected_relations": [
+      "老师",
+      "老师"
+    ],
+    "evidence_path": [
+      {
+        "source": "关山月",
+        "relation": "老师",
+        "target": "高剑父"
+      },
+      {
+        "source": "高剑父",
+        "relation": "老师",
+        "target": "居廉"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-058",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明刘亚楼和粟寒生之间的两跳关系。",
+    "answer": "刘亚楼 --(战友)--> 粟裕 --(儿子)--> 粟寒生",
+    "expected_entities": [
+      "刘亚楼",
+      "粟裕",
+      "粟寒生"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "粟裕"
+      },
+      {
+        "source": "粟裕",
+        "relation": "儿子",
+        "target": "粟寒生"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-059",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼是通过什么路径连接到粟戎生的？",
+    "answer": "刘亚楼 --(战友)--> 粟裕 --(儿子)--> 粟戎生",
+    "expected_entities": [
+      "刘亚楼",
+      "粟裕",
+      "粟戎生"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "粟裕"
+      },
+      {
+        "source": "粟裕",
+        "relation": "儿子",
+        "target": "粟戎生"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-060",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，刘亚楼和楚青之间有什么关联？",
+    "answer": "刘亚楼 --(战友)--> 粟裕 --(妻子)--> 楚青",
+    "expected_entities": [
+      "刘亚楼",
+      "粟裕",
+      "楚青"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "粟裕"
+      },
+      {
+        "source": "粟裕",
+        "relation": "妻子",
+        "target": "楚青"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-061",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼与刘伯承之间的关系链是什么？",
+    "answer": "刘亚楼 --(战友)--> 粟裕 --(战友)--> 刘伯承",
+    "expected_entities": [
+      "刘亚楼",
+      "粟裕",
+      "刘伯承"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "粟裕"
+      },
+      {
+        "source": "粟裕",
+        "relation": "战友",
+        "target": "刘伯承"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-062",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出刘亚楼到朱德的图谱推理路径。",
+    "answer": "刘亚楼 --(战友)--> 粟裕 --(战友)--> 朱德",
+    "expected_entities": [
+      "刘亚楼",
+      "粟裕",
+      "朱德"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "粟裕"
+      },
+      {
+        "source": "粟裕",
+        "relation": "战友",
+        "target": "朱德"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-063",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼和陈毅能否通过图谱中的两跳关系关联起来？",
+    "answer": "刘亚楼 --(战友)--> 粟裕 --(战友)--> 陈毅",
+    "expected_entities": [
+      "刘亚楼",
+      "粟裕",
+      "陈毅"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "粟裕"
+      },
+      {
+        "source": "粟裕",
+        "relation": "战友",
+        "target": "陈毅"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-064",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼和陈丹淮之间存在怎样的关系路径？",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(儿子)--> 陈丹淮",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "陈丹淮"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "儿子",
+        "target": "陈丹淮"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-065",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼和陈小鲁有什么关系？",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(儿子)--> 陈小鲁",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "陈小鲁"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "儿子",
+        "target": "陈小鲁"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-066",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明刘亚楼和陈昊苏之间的两跳关系。",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(儿子)--> 陈昊苏",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "陈昊苏"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "儿子",
+        "target": "陈昊苏"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-067",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼是通过什么路径连接到陈珊珊的？",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(女儿)--> 陈珊珊",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "陈珊珊"
+    ],
+    "expected_relations": [
+      "战友",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "女儿",
+        "target": "陈珊珊"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-068",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，刘亚楼和胡兰畦之间有什么关联？",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(好友)--> 胡兰畦",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "胡兰畦"
+    ],
+    "expected_relations": [
+      "战友",
+      "好友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "好友",
+        "target": "胡兰畦"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-069",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼与张茜之间的关系链是什么？",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(妻子)--> 张茜",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "张茜"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "妻子",
+        "target": "张茜"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-070",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出刘亚楼到肖菊英的图谱推理路径。",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(妻子)--> 肖菊英",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "肖菊英"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "妻子",
+        "target": "肖菊英"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-071",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼和赖月明能否通过图谱中的两跳关系关联起来？",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(妻子)--> 赖月明",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "赖月明"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "妻子",
+        "target": "赖月明"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-072",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼和刘伯承之间存在怎样的关系路径？",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(战友)--> 刘伯承",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "刘伯承"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "战友",
+        "target": "刘伯承"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-073",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘亚楼和粟裕有什么关系？",
+    "answer": "刘亚楼 --(战友)--> 陈毅 --(战友)--> 粟裕",
+    "expected_entities": [
+      "刘亚楼",
+      "陈毅",
+      "粟裕"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘亚楼",
+        "relation": "战友",
+        "target": "陈毅"
+      },
+      {
+        "source": "陈毅",
+        "relation": "战友",
+        "target": "粟裕"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-074",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明刘伯承和吴小兰之间的两跳关系。",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(儿媳)--> 吴小兰",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "吴小兰"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿媳"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "儿媳",
+        "target": "吴小兰"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-075",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承是通过什么路径连接到叶选宁的？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(儿子)--> 叶选宁",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶选宁"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "儿子",
+        "target": "叶选宁"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-076",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，刘伯承和叶选平之间有什么关联？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(儿子)--> 叶选平",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶选平"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "儿子",
+        "target": "叶选平"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-077",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承与叶选廉之间的关系链是什么？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(儿子)--> 叶选廉",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶选廉"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "儿子",
+        "target": "叶选廉"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-078",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出刘伯承到叶向真的图谱推理路径。",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(女儿)--> 叶向真",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶向真"
+    ],
+    "expected_relations": [
+      "战友",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "女儿",
+        "target": "叶向真"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-079",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和叶楚梅能否通过图谱中的两跳关系关联起来？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(女儿)--> 叶楚梅",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶楚梅"
+    ],
+    "expected_relations": [
+      "战友",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "女儿",
+        "target": "叶楚梅"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-080",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和危拱之之间存在怎样的关系路径？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(妻子)--> 危拱之",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "危拱之"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "妻子",
+        "target": "危拱之"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-081",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和曾宪植有什么关系？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(妻子)--> 曾宪植",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "曾宪植"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "妻子",
+        "target": "曾宪植"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-082",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明刘伯承和叶明子之间的两跳关系。",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(孙女)--> 叶明子",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶明子"
+    ],
+    "expected_relations": [
+      "战友",
+      "孙女"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "孙女",
+        "target": "叶明子"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-083",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承是通过什么路径连接到叶晴晴的？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(孙女)--> 叶晴晴",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶晴晴"
+    ],
+    "expected_relations": [
+      "战友",
+      "孙女"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "孙女",
+        "target": "叶晴晴"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-084",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，刘伯承和叶静子之间有什么关联？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(孙女)--> 叶静子",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶静子"
+    ],
+    "expected_relations": [
+      "战友",
+      "孙女"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "孙女",
+        "target": "叶静子"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-085",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承与宋时轮之间的关系链是什么？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(战友)--> 宋时轮",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "宋时轮"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "战友",
+        "target": "宋时轮"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-086",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出刘伯承到郭天民的图谱推理路径。",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(战友)--> 郭天民",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "郭天民"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "战友",
+        "target": "郭天民"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-087",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和叶钻祥能否通过图谱中的两跳关系关联起来？",
+    "answer": "刘伯承 --(战友)--> 叶剑英 --(父亲)--> 叶钻祥",
+    "expected_entities": [
+      "刘伯承",
+      "叶剑英",
+      "叶钻祥"
+    ],
+    "expected_relations": [
+      "战友",
+      "父亲"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "叶剑英"
+      },
+      {
+        "source": "叶剑英",
+        "relation": "父亲",
+        "target": "叶钻祥"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-088",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和刘坤模之间存在怎样的关系路径？",
+    "answer": "刘伯承 --(战友)--> 彭德怀 --(妻子)--> 刘坤模",
+    "expected_entities": [
+      "刘伯承",
+      "彭德怀",
+      "刘坤模"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "彭德怀"
+      },
+      {
+        "source": "彭德怀",
+        "relation": "妻子",
+        "target": "刘坤模"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-089",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和浦安修有什么关系？",
+    "answer": "刘伯承 --(战友)--> 彭德怀 --(妻子)--> 浦安修",
+    "expected_entities": [
+      "刘伯承",
+      "彭德怀",
+      "浦安修"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "彭德怀"
+      },
+      {
+        "source": "彭德怀",
+        "relation": "妻子",
+        "target": "浦安修"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-090",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明刘伯承和彭荣华之间的两跳关系。",
+    "answer": "刘伯承 --(战友)--> 彭德怀 --(弟弟)--> 彭荣华",
+    "expected_entities": [
+      "刘伯承",
+      "彭德怀",
+      "彭荣华"
+    ],
+    "expected_relations": [
+      "战友",
+      "弟弟"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "彭德怀"
+      },
+      {
+        "source": "彭德怀",
+        "relation": "弟弟",
+        "target": "彭荣华"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-091",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承是通过什么路径连接到彭金华的？",
+    "answer": "刘伯承 --(战友)--> 彭德怀 --(弟弟)--> 彭金华",
+    "expected_entities": [
+      "刘伯承",
+      "彭德怀",
+      "彭金华"
+    ],
+    "expected_relations": [
+      "战友",
+      "弟弟"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "彭德怀"
+      },
+      {
+        "source": "彭德怀",
+        "relation": "弟弟",
+        "target": "彭金华"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-092",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，刘伯承和钟伟之间有什么关联？",
+    "answer": "刘伯承 --(战友)--> 彭德怀 --(战友)--> 钟伟",
+    "expected_entities": [
+      "刘伯承",
+      "彭德怀",
+      "钟伟"
+    ],
+    "expected_relations": [
+      "战友",
+      "战友"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "彭德怀"
+      },
+      {
+        "source": "彭德怀",
+        "relation": "战友",
+        "target": "钟伟"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-093",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承与赵力平之间的关系链是什么？",
+    "answer": "刘伯承 --(战友)--> 朱德 --(儿媳)--> 赵力平",
+    "expected_entities": [
+      "刘伯承",
+      "朱德",
+      "赵力平"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿媳"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "儿媳",
+        "target": "赵力平"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-094",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请给出刘伯承到朱琦的图谱推理路径。",
+    "answer": "刘伯承 --(战友)--> 朱德 --(儿子)--> 朱琦",
+    "expected_entities": [
+      "刘伯承",
+      "朱德",
+      "朱琦"
+    ],
+    "expected_relations": [
+      "战友",
+      "儿子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "儿子",
+        "target": "朱琦"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-095",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和朱敏能否通过图谱中的两跳关系关联起来？",
+    "answer": "刘伯承 --(战友)--> 朱德 --(女儿)--> 朱敏",
+    "expected_entities": [
+      "刘伯承",
+      "朱德",
+      "朱敏"
+    ],
+    "expected_relations": [
+      "战友",
+      "女儿"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "女儿",
+        "target": "朱敏"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-096",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和刘铮之间存在怎样的关系路径？",
+    "answer": "刘伯承 --(战友)--> 朱德 --(女婿)--> 刘铮",
+    "expected_entities": [
+      "刘伯承",
+      "朱德",
+      "刘铮"
+    ],
+    "expected_relations": [
+      "战友",
+      "女婿"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "女婿",
+        "target": "刘铮"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-097",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承和伍若兰有什么关系？",
+    "answer": "刘伯承 --(战友)--> 朱德 --(妻子)--> 伍若兰",
+    "expected_entities": [
+      "刘伯承",
+      "朱德",
+      "伍若兰"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "伍若兰"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-098",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "请说明刘伯承和刘从珍之间的两跳关系。",
+    "answer": "刘伯承 --(战友)--> 朱德 --(妻子)--> 刘从珍",
+    "expected_entities": [
+      "刘伯承",
+      "朱德",
+      "刘从珍"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "刘从珍"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-099",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "刘伯承是通过什么路径连接到康克清的？",
+    "answer": "刘伯承 --(战友)--> 朱德 --(妻子)--> 康克清",
+    "expected_entities": [
+      "刘伯承",
+      "朱德",
+      "康克清"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "康克清"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  },
+  {
+    "id": "kgqa-100",
+    "task_type": "multi_hop_path_reasoning",
+    "hop": 2,
+    "question": "在知识图谱中，刘伯承和萧菊芳之间有什么关联？",
+    "answer": "刘伯承 --(战友)--> 朱德 --(妻子)--> 萧菊芳",
+    "expected_entities": [
+      "刘伯承",
+      "朱德",
+      "萧菊芳"
+    ],
+    "expected_relations": [
+      "战友",
+      "妻子"
+    ],
+    "evidence_path": [
+      {
+        "source": "刘伯承",
+        "relation": "战友",
+        "target": "朱德"
+      },
+      {
+        "source": "朱德",
+        "relation": "妻子",
+        "target": "萧菊芳"
+      }
+    ],
+    "evaluation_hint": "???????????????????????????????????????????"
+  }
+]

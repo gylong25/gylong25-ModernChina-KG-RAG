@@ -1,0 +1,3910 @@
+{
+  "summary": {
+    "total": 100,
+    "correct": 94,
+    "wrong": 6,
+    "accuracy": 0.94
+  },
+  "results": [
+    {
+      "id": "kgqa-001",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "万冬儿和邓颖超有什么关系？",
+      "answer": "万冬儿 --(儿子)--> 周恩来 --(妻子)--> 邓颖超",
+      "expected_entities": [
+        "万冬儿",
+        "周恩来",
+        "邓颖超"
+      ],
+      "expected_relations": [
+        "儿子",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "万冬儿",
+          "relation": "儿子",
+          "target": "周恩来"
+        },
+        {
+          "source": "周恩来",
+          "relation": "妻子",
+          "target": "邓颖超"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，万冬儿是周恩来的母亲，邓颖超是周恩来的妻子。二者通过周恩来关联，为婆媳关系。",
+      "graph_context": "[图谱路径]\n命中实体: 万冬儿、邓颖超\n周恩来 --(母亲)--> 万冬儿\n周恩来 --(妻子)--> 邓颖超",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了图谱路径，正确指出中间实体周恩来及关系链，并正确推导出婆媳关系，与标准答案事实完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了图谱路径，正确指出中间实体周恩来及关系链，并正确推导出婆媳关系，与标准答案事实完全一致。"
+    },
+    {
+      "id": "kgqa-002",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明万冬儿和周恩寿之间的两跳关系。",
+      "answer": "万冬儿 --(儿子)--> 周恩来 --(弟弟)--> 周恩寿",
+      "expected_entities": [
+        "万冬儿",
+        "周恩来",
+        "周恩寿"
+      ],
+      "expected_relations": [
+        "儿子",
+        "弟弟"
+      ],
+      "evidence_path": [
+        {
+          "source": "万冬儿",
+          "relation": "儿子",
+          "target": "周恩来"
+        },
+        {
+          "source": "周恩来",
+          "relation": "弟弟",
+          "target": "周恩寿"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，万冬儿与周恩寿的两跳关系路径为：万冬儿 →（母亲）→ 周恩来 →（弟弟）→ 周恩寿。据此可明确两者的直接关系为：**万冬儿是周恩寿的母亲**。",
+      "graph_context": "[图谱路径]\n命中实体: 万冬儿、周恩寿\n周恩来 --(母亲)--> 万冬儿\n周恩来 --(弟弟)--> 周恩寿",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型提供的证据路径与标准答案完全一致，实体、关系及方向均正确，推导出的亲属关系符合逻辑与事实。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型提供的证据路径与标准答案完全一致，实体、关系及方向均正确，推导出的亲属关系符合逻辑与事实。"
+    },
+    {
+      "id": "kgqa-003",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "万冬儿是通过什么路径连接到周恩溥的？",
+      "answer": "万冬儿 --(儿子)--> 周恩来 --(弟弟)--> 周恩溥",
+      "expected_entities": [
+        "万冬儿",
+        "周恩来",
+        "周恩溥"
+      ],
+      "expected_relations": [
+        "儿子",
+        "弟弟"
+      ],
+      "evidence_path": [
+        {
+          "source": "万冬儿",
+          "relation": "儿子",
+          "target": "周恩来"
+        },
+        {
+          "source": "周恩来",
+          "relation": "弟弟",
+          "target": "周恩溥"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，连接路径为：**万冬儿 → 周恩来（母子）→ 周恩溥（兄弟）**。即通过“周恩来”作为中间节点相连。",
+      "graph_context": "[图谱路径]\n命中实体: 万冬儿、周恩溥\n周恩来 --(母亲)--> 万冬儿\n周恩来 --(弟弟)--> 周恩溥",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，准确指出了通过周恩来作为中间节点的连接路径，实体、关系标签及方向均正确匹配。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，准确指出了通过周恩来作为中间节点的连接路径，实体、关系标签及方向均正确匹配。"
+    },
+    {
+      "id": "kgqa-004",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，万冬儿和周劭纲之间有什么关联？",
+      "answer": "万冬儿 --(儿子)--> 周恩来 --(父亲)--> 周劭纲",
+      "expected_entities": [
+        "万冬儿",
+        "周恩来",
+        "周劭纲"
+      ],
+      "expected_relations": [
+        "儿子",
+        "父亲"
+      ],
+      "evidence_path": [
+        {
+          "source": "万冬儿",
+          "relation": "儿子",
+          "target": "周恩来"
+        },
+        {
+          "source": "周恩来",
+          "relation": "父亲",
+          "target": "周劭纲"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，万冬儿的丈夫是周劭纲。",
+      "graph_context": "[图谱路径]\n命中实体: 万冬儿、周劭纲\n万冬儿 --(丈夫)--> 周劭纲",
+      "judge_result": {
+        "is_correct": false,
+        "score": 0,
+        "reason": "模型回答的关系链与标准答案完全不符，错误地建立了直接夫妻关系，且遗漏了关键中间实体周恩来。"
+      },
+      "is_correct": false,
+      "score": 0,
+      "reason": "模型回答的关系链与标准答案完全不符，错误地建立了直接夫妻关系，且遗漏了关键中间实体周恩来。"
+    },
+    {
+      "id": "kgqa-005",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "严信厚与顾维钧之间的关系链是什么？",
+      "answer": "严信厚 --(孙女)--> 严幼韵 --(丈夫)--> 顾维钧",
+      "expected_entities": [
+        "严信厚",
+        "严幼韵",
+        "顾维钧"
+      ],
+      "expected_relations": [
+        "孙女",
+        "丈夫"
+      ],
+      "evidence_path": [
+        {
+          "source": "严信厚",
+          "relation": "孙女",
+          "target": "严幼韵"
+        },
+        {
+          "source": "严幼韵",
+          "relation": "丈夫",
+          "target": "顾维钧"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严信厚与顾维钧的关系链为：\n**严信厚 →（孙女）→ 严幼韵 →（妻子）→ 顾维钧**\n即：严信厚是严幼韵的祖父，严幼韵是顾维钧的妻子。",
+      "graph_context": "[图谱路径]\n命中实体: 严信厚、顾维钧\n严信厚 --(孙女)--> 严幼韵\n顾维钧 --(妻子)--> 严幼韵",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的关系链实体与标准答案完全一致，证据路径准确匹配“孙女”和“丈夫”关系。文本中虽将第二层关系表述为“妻子”，但结合上下文解释及证据路径可知其事实指向完全正确，符合图谱路径要求。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的关系链实体与标准答案完全一致，证据路径准确匹配“孙女”和“丈夫”关系。文本中虽将第二层关系表述为“妻子”，但结合上下文解释及证据路径可知其事实指向完全正确，符合图谱路径要求。"
+    },
+    {
+      "id": "kgqa-006",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出严信厚到杨雪兰的图谱推理路径。",
+      "answer": "严信厚 --(孙女)--> 严幼韵 --(女儿)--> 杨雪兰",
+      "expected_entities": [
+        "严信厚",
+        "严幼韵",
+        "杨雪兰"
+      ],
+      "expected_relations": [
+        "孙女",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "严信厚",
+          "relation": "孙女",
+          "target": "严幼韵"
+        },
+        {
+          "source": "严幼韵",
+          "relation": "女儿",
+          "target": "杨雪兰"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严信厚到杨雪兰的推理路径为：\n**严信厚 --(孙女)--> 严幼韵 --(女儿)--> 杨雪兰**。",
+      "graph_context": "[图谱路径]\n命中实体: 严信厚、杨雪兰\n严信厚 --(孙女)--> 严幼韵\n严幼韵 --(女儿)--> 杨雪兰",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，实体、关系及方向均正确匹配。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，实体、关系及方向均正确匹配。"
+    },
+    {
+      "id": "kgqa-007",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "严信厚和严彩韵能否通过图谱中的两跳关系关联起来？",
+      "answer": "严信厚 --(孙女)--> 严幼韵 --(姐姐)--> 严彩韵",
+      "expected_entities": [
+        "严信厚",
+        "严幼韵",
+        "严彩韵"
+      ],
+      "expected_relations": [
+        "孙女",
+        "姐姐"
+      ],
+      "evidence_path": [
+        {
+          "source": "严信厚",
+          "relation": "孙女",
+          "target": "严幼韵"
+        },
+        {
+          "source": "严幼韵",
+          "relation": "姐姐",
+          "target": "严彩韵"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，严信厚与严彩韵可通过以下两跳关系直接关联：\n**严信厚 →（孙女）→ 严幼韵 →（姐姐）→ 严彩韵**。",
+      "graph_context": "[图谱路径]\n命中实体: 严信厚、严彩韵\n严信厚 --(孙女)--> 严幼韵\n严幼韵 --(姐姐)--> 严彩韵",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致，准确验证了两跳关联关系。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致，准确验证了两跳关联关系。"
+    },
+    {
+      "id": "kgqa-008",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "严信厚和严莲韵之间存在怎样的关系路径？",
+      "answer": "严信厚 --(孙女)--> 严幼韵 --(姐姐)--> 严莲韵",
+      "expected_entities": [
+        "严信厚",
+        "严幼韵",
+        "严莲韵"
+      ],
+      "expected_relations": [
+        "孙女",
+        "姐姐"
+      ],
+      "evidence_path": [
+        {
+          "source": "严信厚",
+          "relation": "孙女",
+          "target": "严幼韵"
+        },
+        {
+          "source": "严幼韵",
+          "relation": "姐姐",
+          "target": "严莲韵"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严信厚与严莲韵的关系路径为：**严信厚 --(孙女)--> 严幼韵 --(姐姐)--> 严莲韵**。",
+      "graph_context": "[图谱路径]\n命中实体: 严信厚、严莲韵\n严信厚 --(孙女)--> 严幼韵\n严幼韵 --(姐姐)--> 严莲韵",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，实体、关系及方向均准确无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，实体、关系及方向均准确无误。"
+    },
+    {
+      "id": "kgqa-009",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "严信厚和严子均有什么关系？",
+      "answer": "严信厚 --(孙女)--> 严幼韵 --(父亲)--> 严子均",
+      "expected_entities": [
+        "严信厚",
+        "严幼韵",
+        "严子均"
+      ],
+      "expected_relations": [
+        "孙女",
+        "父亲"
+      ],
+      "evidence_path": [
+        {
+          "source": "严信厚",
+          "relation": "孙女",
+          "target": "严幼韵"
+        },
+        {
+          "source": "严幼韵",
+          "relation": "父亲",
+          "target": "严子均"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严子均是严信厚的儿子。",
+      "graph_context": "[图谱路径]\n命中实体: 严信厚、严子均\n严信厚 --(儿子)--> 严子均",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型正确推断了图谱路径所蕴含的直接亲属关系（严信厚是严子均的父亲），与标准答案事实一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型正确推断了图谱路径所蕴含的直接亲属关系（严信厚是严子均的父亲），与标准答案事实一致。"
+    },
+    {
+      "id": "kgqa-010",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明严幼韵和顾德昌之间的两跳关系。",
+      "answer": "严幼韵 --(丈夫)--> 顾维钧 --(儿子)--> 顾德昌",
+      "expected_entities": [
+        "严幼韵",
+        "顾维钧",
+        "顾德昌"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "严幼韵",
+          "relation": "丈夫",
+          "target": "顾维钧"
+        },
+        {
+          "source": "顾维钧",
+          "relation": "儿子",
+          "target": "顾德昌"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严幼韵与顾德昌的两跳关系为：**严幼韵是顾维钧的妻子，顾德昌是顾维钧的儿子**。两人通过中间实体“顾维钧”相连，构成“妻子的儿子”（即继母与继子）的两跳关联。",
+      "graph_context": "[图谱路径]\n命中实体: 严幼韵、顾德昌\n顾维钧 --(妻子)--> 严幼韵\n顾维钧 --(儿子)--> 顾德昌",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了中间实体顾维钧，证据路径的实体、关系及方向与标准答案完全一致，语义解释正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了中间实体顾维钧，证据路径的实体、关系及方向与标准答案完全一致，语义解释正确。"
+    },
+    {
+      "id": "kgqa-011",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "严幼韵是通过什么路径连接到顾福昌的？",
+      "answer": "严幼韵 --(丈夫)--> 顾维钧 --(儿子)--> 顾福昌",
+      "expected_entities": [
+        "严幼韵",
+        "顾维钧",
+        "顾福昌"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "严幼韵",
+          "relation": "丈夫",
+          "target": "顾维钧"
+        },
+        {
+          "source": "顾维钧",
+          "relation": "儿子",
+          "target": "顾福昌"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严幼韵与顾福昌通过**顾维钧**相连。具体路径为：严幼韵是顾维钧的妻子，顾福昌是顾维钧的儿子。",
+      "graph_context": "[图谱路径]\n命中实体: 严幼韵、顾福昌\n顾维钧 --(妻子)--> 严幼韵\n顾维钧 --(儿子)--> 顾福昌",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体及关系方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体及关系方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-012",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，严幼韵和顾裕昌之间有什么关联？",
+      "answer": "严幼韵 --(丈夫)--> 顾维钧 --(儿子)--> 顾裕昌",
+      "expected_entities": [
+        "严幼韵",
+        "顾维钧",
+        "顾裕昌"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "严幼韵",
+          "relation": "丈夫",
+          "target": "顾维钧"
+        },
+        {
+          "source": "顾维钧",
+          "relation": "儿子",
+          "target": "顾裕昌"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严幼韵与顾裕昌通过顾维钧关联：严幼韵是顾维钧的妻子，顾裕昌是顾维钧的儿子，因此严幼韵是顾裕昌的继母（或母亲）。二者构成母子（继母子）亲属关系。",
+      "graph_context": "[图谱路径]\n命中实体: 严幼韵、顾裕昌\n顾维钧 --(妻子)--> 严幼韵\n顾维钧 --(儿子)--> 顾裕昌",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确复现了标准答案的知识图谱路径，实体、关系及方向完全一致，逻辑清晰。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确复现了标准答案的知识图谱路径，实体、关系及方向完全一致，逻辑清晰。"
+    },
+    {
+      "id": "kgqa-013",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "严幼韵与顾菊珍之间的关系链是什么？",
+      "answer": "严幼韵 --(丈夫)--> 顾维钧 --(女儿)--> 顾菊珍",
+      "expected_entities": [
+        "严幼韵",
+        "顾维钧",
+        "顾菊珍"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "严幼韵",
+          "relation": "丈夫",
+          "target": "顾维钧"
+        },
+        {
+          "source": "顾维钧",
+          "relation": "女儿",
+          "target": "顾菊珍"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，关系链为：**严幼韵 —(顾维钧的妻子)→ 顾维钧 —(父亲)→ 顾菊珍**。即严幼韵是顾菊珍的继母。",
+      "graph_context": "[图谱路径]\n命中实体: 严幼韵、顾菊珍\n顾维钧 --(妻子)--> 严幼韵\n顾维钧 --(女儿)--> 顾菊珍",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型提供的证据路径与标准答案完全一致，实体、关系及方向均正确。文本描述虽使用相对称谓，但结合证据路径准确表达了相同的图谱关系链。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型提供的证据路径与标准答案完全一致，实体、关系及方向均正确。文本描述虽使用相对称谓，但结合证据路径准确表达了相同的图谱关系链。"
+    },
+    {
+      "id": "kgqa-014",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出严幼韵到唐宝玥的图谱推理路径。",
+      "answer": "严幼韵 --(丈夫)--> 顾维钧 --(妻子)--> 唐宝玥",
+      "expected_entities": [
+        "严幼韵",
+        "顾维钧",
+        "唐宝玥"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "严幼韵",
+          "relation": "丈夫",
+          "target": "顾维钧"
+        },
+        {
+          "source": "顾维钧",
+          "relation": "妻子",
+          "target": "唐宝玥"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严幼韵到唐宝玥的推理路径为：\n**严幼韵 --(丈夫)--> 顾维钧 --(妻子)--> 唐宝玥**\n\n（注：两者无直接边连接，需通过共同实体“顾维钧”中转。因图谱中给定关系方向为顾维钧指向其妻子，故从严幼韵反向推导至顾维钧时需使用“丈夫”关系。）",
+      "graph_context": "[图谱路径]\n命中实体: 严幼韵、唐宝玥\n顾维钧 --(妻子)--> 严幼韵\n顾维钧 --(妻子)--> 唐宝玥",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，准确给出了包含中间实体“顾维钧”的完整推理路径及关系方向，符合判定标准。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，准确给出了包含中间实体“顾维钧”的完整推理路径及关系方向，符合判定标准。"
+    },
+    {
+      "id": "kgqa-015",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "严幼韵和张润娥能否通过图谱中的两跳关系关联起来？",
+      "answer": "严幼韵 --(丈夫)--> 顾维钧 --(妻子)--> 张润娥",
+      "expected_entities": [
+        "严幼韵",
+        "顾维钧",
+        "张润娥"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "严幼韵",
+          "relation": "丈夫",
+          "target": "顾维钧"
+        },
+        {
+          "source": "顾维钧",
+          "relation": "妻子",
+          "target": "张润娥"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "可以。根据图谱上下文，严幼韵与张润娥均与顾维钧直接相连，二者可通过“严幼韵—顾维钧—张润娥”的两跳路径关联起来。",
+      "graph_context": "[图谱路径]\n命中实体: 严幼韵、张润娥\n顾维钧 --(妻子)--> 严幼韵\n顾维钧 --(妻子)--> 张润娥",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两跳路径为严幼韵-顾维钧-张润娥，与标准答案及证据路径完全一致，实体、关系链和方向均正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两跳路径为严幼韵-顾维钧-张润娥，与标准答案及证据路径完全一致，实体、关系链和方向均正确。"
+    },
+    {
+      "id": "kgqa-016",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "严幼韵和黄蕙兰之间存在怎样的关系路径？",
+      "answer": "严幼韵 --(丈夫)--> 顾维钧 --(妻子)--> 黄蕙兰",
+      "expected_entities": [
+        "严幼韵",
+        "顾维钧",
+        "黄蕙兰"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "严幼韵",
+          "relation": "丈夫",
+          "target": "顾维钧"
+        },
+        {
+          "source": "顾维钧",
+          "relation": "妻子",
+          "target": "黄蕙兰"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，严幼韵与黄蕙兰的关系路径为：**严幼韵 --(丈夫)--> 顾维钧 --(妻子)--> 黄蕙兰**（即两人曾同为顾维钧之妻）。",
+      "graph_context": "[图谱路径]\n命中实体: 严幼韵、黄蕙兰\n顾维钧 --(妻子)--> 严幼韵\n顾维钧 --(妻子)--> 黄蕙兰",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，实体、关系及方向均准确无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，实体、关系及方向均准确无误。"
+    },
+    {
+      "id": "kgqa-017",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "任弼时和任远远有什么关系？",
+      "answer": "任弼时 --(妻子)--> 陈琮英 --(儿子)--> 任远远",
+      "expected_entities": [
+        "任弼时",
+        "陈琮英",
+        "任远远"
+      ],
+      "expected_relations": [
+        "妻子",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "任弼时",
+          "relation": "妻子",
+          "target": "陈琮英"
+        },
+        {
+          "source": "陈琮英",
+          "relation": "儿子",
+          "target": "任远远"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，任远远是任弼时的儿子。",
+      "graph_context": "[图谱路径]\n命中实体: 任弼时、任远远\n任弼时 --(儿子)--> 任远远",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确指出了任远远是任弼时的儿子，与标准答案路径推导出的核心事实一致，实体与关系方向均正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确指出了任远远是任弼时的儿子，与标准答案路径推导出的核心事实一致，实体与关系方向均正确。"
+    },
+    {
+      "id": "kgqa-018",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明任弼时和陈达邦之间的两跳关系。",
+      "answer": "任弼时 --(妻子)--> 陈琮英 --(哥哥)--> 陈达邦",
+      "expected_entities": [
+        "任弼时",
+        "陈琮英",
+        "陈达邦"
+      ],
+      "expected_relations": [
+        "妻子",
+        "哥哥"
+      ],
+      "evidence_path": [
+        {
+          "source": "任弼时",
+          "relation": "妻子",
+          "target": "陈琮英"
+        },
+        {
+          "source": "陈琮英",
+          "relation": "哥哥",
+          "target": "陈达邦"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，任弼时与陈达邦的两跳关系路径为：\n**任弼时 ←(丈夫)→ 陈琮英 ←(哥哥)→ 陈达邦**\n\n具体而言：陈琮英是任弼时的妻子，陈达邦是陈琮英的哥哥。因此，陈达邦是任弼时的**妻兄（大舅子）**，任弼时是陈达邦的**妹夫**。两人系姻亲关系。",
+      "graph_context": "[图谱路径]\n命中实体: 任弼时、陈达邦\n陈琮英 --(丈夫)--> 任弼时\n陈琮英 --(哥哥)--> 陈达邦",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确给出了与标准答案一致的两跳路径，实体、关系及方向完全匹配，证据链清晰无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确给出了与标准答案一致的两跳路径，实体、关系及方向完全匹配，证据链清晰无误。"
+    },
+    {
+      "id": "kgqa-019",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "任弼时是通过什么路径连接到任远征的？",
+      "answer": "任弼时 --(妻子)--> 陈琮英 --(女儿)--> 任远征",
+      "expected_entities": [
+        "任弼时",
+        "陈琮英",
+        "任远征"
+      ],
+      "expected_relations": [
+        "妻子",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "任弼时",
+          "relation": "妻子",
+          "target": "陈琮英"
+        },
+        {
+          "source": "陈琮英",
+          "relation": "女儿",
+          "target": "任远征"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，任弼时与任远征的连接路径为：**任弼时 --(女儿)--> 任远征**（即任远征是任弼时的女儿）。",
+      "graph_context": "[图谱路径]\n命中实体: 任弼时、任远征\n任弼时 --(女儿)--> 任远征",
+      "judge_result": {
+        "is_correct": false,
+        "score": 0,
+        "reason": "模型回答声称存在直接父女关系，遗漏了中间实体陈琮英，路径结构与标准答案不一致。"
+      },
+      "is_correct": false,
+      "score": 0,
+      "reason": "模型回答声称存在直接父女关系，遗漏了中间实体陈琮英，路径结构与标准答案不一致。"
+    },
+    {
+      "id": "kgqa-020",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，任弼时和任远志之间有什么关联？",
+      "answer": "任弼时 --(妻子)--> 陈琮英 --(女儿)--> 任远志",
+      "expected_entities": [
+        "任弼时",
+        "陈琮英",
+        "任远志"
+      ],
+      "expected_relations": [
+        "妻子",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "任弼时",
+          "relation": "妻子",
+          "target": "陈琮英"
+        },
+        {
+          "source": "陈琮英",
+          "relation": "女儿",
+          "target": "任远志"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，任弼时与任远志的关联为：任远志是任弼时的女儿。",
+      "graph_context": "[图谱路径]\n命中实体: 任弼时、任远志\n任弼时 --(女儿)--> 任远志",
+      "judge_result": {
+        "is_correct": false,
+        "score": 0,
+        "reason": "模型回答省略了中间实体“陈琮英”，将两步路径简化为直接父女关系，违反判定标准第3条。"
+      },
+      "is_correct": false,
+      "score": 0,
+      "reason": "模型回答省略了中间实体“陈琮英”，将两步路径简化为直接父女关系，违反判定标准第3条。"
+    },
+    {
+      "id": "kgqa-021",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "任弼时与任远芳之间的关系链是什么？",
+      "answer": "任弼时 --(妻子)--> 陈琮英 --(女儿)--> 任远芳",
+      "expected_entities": [
+        "任弼时",
+        "陈琮英",
+        "任远芳"
+      ],
+      "expected_relations": [
+        "妻子",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "任弼时",
+          "relation": "妻子",
+          "target": "陈琮英"
+        },
+        {
+          "source": "陈琮英",
+          "relation": "女儿",
+          "target": "任远芳"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，任弼时与任远芳的关系链为：**任弼时 →（父亲）→ 任远芳**（即任远芳是任弼时的女儿）。",
+      "graph_context": "[图谱路径]\n命中实体: 任弼时、任远芳\n任弼时 --(女儿)--> 任远芳",
+      "judge_result": {
+        "is_correct": false,
+        "score": 0,
+        "reason": "模型回答将关系链表述为直接父子关系，缺失中间实体“陈琮英”，与标准答案的两跳路径不一致，违反判定标准。"
+      },
+      "is_correct": false,
+      "score": 0,
+      "reason": "模型回答将关系链表述为直接父子关系，缺失中间实体“陈琮英”，与标准答案的两跳路径不一致，违反判定标准。"
+    },
+    {
+      "id": "kgqa-022",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出伍若兰到赵力平的图谱推理路径。",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(儿媳)--> 赵力平",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "赵力平"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "儿媳"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "儿媳",
+          "target": "赵力平"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，推理路径为：**伍若兰 →（丈夫）→ 朱德 →（儿媳）→ 赵力平**。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、赵力平\n朱德 --(妻子)--> 伍若兰\n朱德 --(儿媳)--> 赵力平",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的推理路径、实体及关系方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的推理路径、实体及关系方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-023",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰和朱琦能否通过图谱中的两跳关系关联起来？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(儿子)--> 朱琦",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "朱琦"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "儿子",
+          "target": "朱琦"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，伍若兰与朱德存在“妻子”关系，朱德与朱琦存在“儿子”关系。两者通过共同节点“朱德”可构成两跳路径（伍若兰—朱德—朱琦），因此能够通过图谱中的两跳关系关联起来。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、朱琦\n朱德 --(妻子)--> 伍若兰\n朱德 --(儿子)--> 朱琦",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确指出了两跳路径及中间节点，与标准答案事实一致，仅亲属称谓表述略有差异，不影响核心路径判断。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确指出了两跳路径及中间节点，与标准答案事实一致，仅亲属称谓表述略有差异，不影响核心路径判断。"
+    },
+    {
+      "id": "kgqa-024",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰和朱敏之间存在怎样的关系路径？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(女儿)--> 朱敏",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "朱敏"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "女儿",
+          "target": "朱敏"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰与朱敏的关系路径为：**伍若兰 —(丈夫)→ 朱德 —(女儿)→ 朱敏**（即伍若兰是朱德的妻子，朱敏是朱德的女儿，两人通过朱德相连）。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、朱敏\n朱德 --(妻子)--> 伍若兰\n朱德 --(女儿)--> 朱敏",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，实体、关系及路径方向均正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，实体、关系及路径方向均正确。"
+    },
+    {
+      "id": "kgqa-025",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰和刘铮有什么关系？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(女婿)--> 刘铮",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "刘铮"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "女婿"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "女婿",
+          "target": "刘铮"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰是朱德的妻子，刘铮是朱德的女婿。因此，**伍若兰是刘铮的岳母**。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、刘铮\n朱德 --(妻子)--> 伍若兰\n朱德 --(女婿)--> 刘铮",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向完全一致，并正确推导出了两人间的亲属关系。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向完全一致，并正确推导出了两人间的亲属关系。"
+    },
+    {
+      "id": "kgqa-026",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明伍若兰和刘从珍之间的两跳关系。",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 刘从珍",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "刘从珍"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "刘从珍"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰与刘从珍的两跳关系路径为：**伍若兰 ←(妻子)→ 朱德 ←(妻子)→ 刘从珍**。两者通过朱德相连，均为朱德的妻子（同夫关系）。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、刘从珍\n朱德 --(妻子)--> 伍若兰\n朱德 --(妻子)--> 刘从珍",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型提供的证据路径与标准答案完全一致，准确指出了两跳关系及中间实体朱德，语义解释正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型提供的证据路径与标准答案完全一致，准确指出了两跳关系及中间实体朱德，语义解释正确。"
+    },
+    {
+      "id": "kgqa-027",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰是通过什么路径连接到康克清的？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 康克清",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "康克清"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "康克清"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰与康克清通过**朱德**相连。具体路径为：伍若兰是朱德的妻子，康克清的丈夫是朱德（两人均与朱德存在婚姻关系）。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、康克清\n朱德 --(妻子)--> 伍若兰\n康克清 --(丈夫)--> 朱德",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型提供的证据路径与标准答案在实体、关系名称及方向上完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型提供的证据路径与标准答案在实体、关系名称及方向上完全一致。"
+    },
+    {
+      "id": "kgqa-028",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，伍若兰和萧菊芳之间有什么关联？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 萧菊芳",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "萧菊芳"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "萧菊芳"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰和萧菊芳的关联为：两人均为朱德的妻子。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、萧菊芳\n朱德 --(妻子)--> 伍若兰\n朱德 --(妻子)--> 萧菊芳",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型提供的证据路径与标准答案完全一致，准确概括了两人同为朱德妻子的关系，实体、关系及方向均无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型提供的证据路径与标准答案完全一致，准确概括了两人同为朱德妻子的关系，实体、关系及方向均无误。"
+    },
+    {
+      "id": "kgqa-029",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰与贺治华之间的关系链是什么？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 贺治华",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "贺治华"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "贺治华"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据提供的图谱上下文，伍若兰与贺治华的关系链为：\n**伍若兰 →（丈夫）→ 朱德 ←（妻子）← 贺治华**\n\n两人均通过共同丈夫朱德相连，即均为朱德的妻子。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、贺治华\n朱德 --(妻子)--> 伍若兰\n朱德 --(妻子)--> 贺治华",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两人通过朱德相连的事实，提供的证据路径与标准答案完全一致，实体、关系及逻辑链条正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两人通过朱德相连的事实，提供的证据路径与标准答案完全一致，实体、关系及逻辑链条正确。"
+    },
+    {
+      "id": "kgqa-030",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出伍若兰到陈玉珍的图谱推理路径。",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(妻子)--> 陈玉珍",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "陈玉珍"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "陈玉珍"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰到陈玉珍的推理路径为：\n**伍若兰 ←(妻子)─ 朱德 ─(妻子)→ 陈玉珍**\n\n（注：严格依据给定边方向，两人均作为“妻子”关系指向同一实体“朱德”，故以朱德为共同关联节点相连。）",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、陈玉珍\n朱德 --(妻子)--> 伍若兰\n朱德 --(妻子)--> 陈玉珍",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型提供的证据路径与标准答案完全一致，实体、关系及方向均正确，核心推理路径无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型提供的证据路径与标准答案完全一致，实体、关系及方向均正确，核心推理路径无误。"
+    },
+    {
+      "id": "kgqa-031",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰和朱新华能否通过图谱中的两跳关系关联起来？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(孙女)--> 朱新华",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "朱新华"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "孙女"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "孙女",
+          "target": "朱新华"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，伍若兰与朱德存在“妻子”关系，朱新华与朱德存在“孙女”关系。两者通过中间实体“朱德”可构成两跳路径（伍若兰—朱德—朱新华），因此能够通过两跳关系关联。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、朱新华\n朱德 --(妻子)--> 伍若兰\n朱德 --(孙女)--> 朱新华",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确指出了中间实体朱德，正确描述了伍若兰与朱德的夫妻关系及朱德与朱新华的祖孙关系，两跳路径与标准答案事实一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确指出了中间实体朱德，正确描述了伍若兰与朱德的夫妻关系及朱德与朱新华的祖孙关系，两跳路径与标准答案事实一致。"
+    },
+    {
+      "id": "kgqa-032",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰和朱全华之间存在怎样的关系路径？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(孙子)--> 朱全华",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "朱全华"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "孙子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "孙子",
+          "target": "朱全华"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，两者通过“朱德”相连，关系路径为：**伍若兰 --(丈夫)--> 朱德 --(孙子)--> 朱全华**。即伍若兰是朱全华的祖母（奶奶）。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、朱全华\n朱德 --(妻子)--> 伍若兰\n朱德 --(孙子)--> 朱全华",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的关系路径、实体及方向与标准答案完全一致，准确复现了图谱事实。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的关系路径、实体及方向与标准答案完全一致，准确复现了图谱事实。"
+    },
+    {
+      "id": "kgqa-033",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰和朱和平有什么关系？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(孙子)--> 朱和平",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "朱和平"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "孙子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "孙子",
+          "target": "朱和平"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰是朱德的妻子，朱和平是朱德的孙子，因此伍若兰是朱和平的祖母。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、朱和平\n朱德 --(妻子)--> 伍若兰\n朱德 --(孙子)--> 朱和平",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向均一致，并正确推导出祖孙关系。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向均一致，并正确推导出祖孙关系。"
+    },
+    {
+      "id": "kgqa-034",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明伍若兰和朱援朝之间的两跳关系。",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(孙子)--> 朱援朝",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "朱援朝"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "孙子"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "孙子",
+          "target": "朱援朝"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰与朱援朝的两跳关系路径为：**伍若兰 ←(丈夫)→ 朱德 ←(孙子)→ 朱援朝**。\n\n具体而言：伍若兰是朱德的妻子，朱德是朱援朝的祖父，因此伍若兰是朱援朝的祖母（祖辈配偶）。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、朱援朝\n朱德 --(妻子)--> 伍若兰\n朱德 --(孙子)--> 朱援朝",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致，证据链清晰，语义解释准确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致，证据链清晰，语义解释准确。"
+    },
+    {
+      "id": "kgqa-035",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰是通过什么路径连接到刘伯承的？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(战友)--> 刘伯承",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "刘伯承"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "战友",
+          "target": "刘伯承"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，连接路径为：**伍若兰 —(朱德的妻子)—> 朱德 —(战友)—> 刘伯承**。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、刘伯承\n朱德 --(妻子)--> 伍若兰\n朱德 --(战友)--> 刘伯承",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径实体、关系及方向与标准答案完全一致，仅自然语言表述略有不同，符合判定标准。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径实体、关系及方向与标准答案完全一致，仅自然语言表述略有不同，符合判定标准。"
+    },
+    {
+      "id": "kgqa-036",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，伍若兰和朱良才之间有什么关联？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(战友)--> 朱良才",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "朱良才"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "战友",
+          "target": "朱良才"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰与朱良才无直接关联，而是通过**朱德**形成间接联系：伍若兰是朱德的妻子，朱良才是朱德的战友。即在该图谱中，朱良才是伍若兰丈夫的战友。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、朱良才\n朱德 --(妻子)--> 伍若兰\n朱德 --(战友)--> 朱良才",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了通过朱德的间接关联路径，实体、关系及方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了通过朱德的间接关联路径，实体、关系及方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-037",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "伍若兰与粟裕之间的关系链是什么？",
+      "answer": "伍若兰 --(丈夫)--> 朱德 --(战友)--> 粟裕",
+      "expected_entities": [
+        "伍若兰",
+        "朱德",
+        "粟裕"
+      ],
+      "expected_relations": [
+        "丈夫",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "伍若兰",
+          "relation": "丈夫",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "战友",
+          "target": "粟裕"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，伍若兰与粟裕的关系链为：**伍若兰 ←(妻子)→ 朱德 ←(战友)→ 粟裕**（即伍若兰是朱德的妻子，朱德是粟裕的战友）。",
+      "graph_context": "[图谱路径]\n命中实体: 伍若兰、粟裕\n朱德 --(妻子)--> 伍若兰\n朱德 --(战友)--> 粟裕",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的实体、关系链及方向与标准答案完全一致，提供的证据路径准确无误，语义表达正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的实体、关系链及方向与标准答案完全一致，提供的证据路径准确无误，语义表达正确。"
+    },
+    {
+      "id": "kgqa-038",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出傅秋涛到叶华明的图谱推理路径。",
+      "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶华明",
+      "expected_entities": [
+        "傅秋涛",
+        "叶挺",
+        "叶华明"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅秋涛",
+          "relation": "战友",
+          "target": "叶挺"
+        },
+        {
+          "source": "叶挺",
+          "relation": "儿子",
+          "target": "叶华明"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅秋涛到叶华明的推理路径为：\n**傅秋涛 ←(战友)─ 叶挺 ─(儿子)→ 叶华明**\n（即：傅秋涛与叶挺为战友关系，叶华明系叶挺之子，二者通过共同关联人物叶挺相连。）",
+      "graph_context": "[图谱路径]\n命中实体: 傅秋涛、叶华明\n叶挺 --(战友)--> 傅秋涛\n叶挺 --(儿子)--> 叶华明",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向均一致，且提供的JSON证据与标准答案完全吻合。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向均一致，且提供的JSON证据与标准答案完全吻合。"
+    },
+    {
+      "id": "kgqa-039",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅秋涛和叶启光能否通过图谱中的两跳关系关联起来？",
+      "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶启光",
+      "expected_entities": [
+        "傅秋涛",
+        "叶挺",
+        "叶启光"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅秋涛",
+          "relation": "战友",
+          "target": "叶挺"
+        },
+        {
+          "source": "叶挺",
+          "relation": "儿子",
+          "target": "叶启光"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，傅秋涛与叶挺为战友关系，叶挺与叶启光为父子关系，两人可通过“傅秋涛—（战友）—叶挺—（父子）—叶启光”的两跳路径关联。",
+      "graph_context": "[图谱路径]\n命中实体: 傅秋涛、叶启光\n叶挺 --(战友)--> 傅秋涛\n叶挺 --(儿子)--> 叶启光",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确指出中间实体为叶挺，关系链与标准答案及证据完全一致，方向正确，符合两跳关联要求。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确指出中间实体为叶挺，关系链与标准答案及证据完全一致，方向正确，符合两跳关联要求。"
+    },
+    {
+      "id": "kgqa-040",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅秋涛和叶正光之间存在怎样的关系路径？",
+      "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶正光",
+      "expected_entities": [
+        "傅秋涛",
+        "叶挺",
+        "叶正光"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅秋涛",
+          "relation": "战友",
+          "target": "叶挺"
+        },
+        {
+          "source": "叶挺",
+          "relation": "儿子",
+          "target": "叶正光"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅秋涛与叶正光之间的关联路径为：**傅秋涛 ←(战友)→ 叶挺 ←(父亲)→ 叶正光**。即：傅秋涛是叶挺的战友，叶正光是叶挺的儿子，两人通过叶挺形成间接的“父辈战友”关系。",
+      "graph_context": "[图谱路径]\n命中实体: 傅秋涛、叶正光\n叶挺 --(战友)--> 傅秋涛\n叶挺 --(儿子)--> 叶正光",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了中间实体叶挺，关系链（战友、儿子）及方向与标准答案完全一致，提供的证据路径也与标准答案吻合。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了中间实体叶挺，关系链（战友、儿子）及方向与标准答案完全一致，提供的证据路径也与标准答案吻合。"
+    },
+    {
+      "id": "kgqa-041",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅秋涛和叶正大有什么关系？",
+      "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶正大",
+      "expected_entities": [
+        "傅秋涛",
+        "叶挺",
+        "叶正大"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅秋涛",
+          "relation": "战友",
+          "target": "叶挺"
+        },
+        {
+          "source": "叶挺",
+          "relation": "儿子",
+          "target": "叶正大"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅秋涛是叶正大父亲（叶挺）的战友。两人无直接关系，仅通过叶挺产生间接关联。",
+      "graph_context": "[图谱路径]\n命中实体: 傅秋涛、叶正大\n叶挺 --(战友)--> 傅秋涛\n叶挺 --(儿子)--> 叶正大",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答完整准确地还原了标准答案的图谱路径，实体、关系与方向均一致，正确说明了通过叶挺产生的间接关联。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答完整准确地还原了标准答案的图谱路径，实体、关系与方向均一致，正确说明了通过叶挺产生的间接关联。"
+    },
+    {
+      "id": "kgqa-042",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明傅秋涛和叶正明之间的两跳关系。",
+      "answer": "傅秋涛 --(战友)--> 叶挺 --(儿子)--> 叶正明",
+      "expected_entities": [
+        "傅秋涛",
+        "叶挺",
+        "叶正明"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅秋涛",
+          "relation": "战友",
+          "target": "叶挺"
+        },
+        {
+          "source": "叶挺",
+          "relation": "儿子",
+          "target": "叶正明"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅秋涛与叶正明通过中间实体“叶挺”构成两跳关系：\n1. 傅秋涛是叶挺的战友；\n2. 叶正明是叶挺的儿子。\n\n综上，两人的关系可明确表述为：**傅秋涛是叶正明父亲的战友**（或叶正明是傅秋涛战友的儿子）。",
+      "graph_context": "[图谱路径]\n命中实体: 傅秋涛、叶正明\n叶挺 --(战友)--> 傅秋涛\n叶挺 --(儿子)--> 叶正明",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了图谱路径，中间实体、关系及方向均与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了图谱路径，中间实体、关系及方向均与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-043",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅秋涛是通过什么路径连接到叶大鹰的？",
+      "answer": "傅秋涛 --(战友)--> 叶挺 --(孙子)--> 叶大鹰",
+      "expected_entities": [
+        "傅秋涛",
+        "叶挺",
+        "叶大鹰"
+      ],
+      "expected_relations": [
+        "战友",
+        "孙子"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅秋涛",
+          "relation": "战友",
+          "target": "叶挺"
+        },
+        {
+          "source": "叶挺",
+          "relation": "孙子",
+          "target": "叶大鹰"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，连接路径为：**傅秋涛 ←(战友) 叶挺 ←(孙子) 叶大鹰**。即傅秋涛与叶挺为战友关系，叶大鹰为叶挺之孙，两者通过共同关联人物“叶挺”相连。",
+      "graph_context": "[图谱路径]\n命中实体: 傅秋涛、叶大鹰\n叶挺 --(战友)--> 傅秋涛\n叶挺 --(孙子)--> 叶大鹰",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的证据路径与标准答案完全一致，实体、关系及方向均正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的证据路径与标准答案完全一致，实体、关系及方向均正确。"
+    },
+    {
+      "id": "kgqa-044",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，傅秋涛和赵一曼之间有什么关联？",
+      "answer": "傅秋涛 --(战友)--> 叶挺 --(战友)--> 赵一曼",
+      "expected_entities": [
+        "傅秋涛",
+        "叶挺",
+        "赵一曼"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅秋涛",
+          "relation": "战友",
+          "target": "叶挺"
+        },
+        {
+          "source": "叶挺",
+          "relation": "战友",
+          "target": "赵一曼"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅秋涛与赵一曼之间无直接关联，仅存在一条间接路径：赵一曼与叶挺为战友关系，叶挺与傅秋涛亦为战友关系（即通过叶挺相连）。当前图谱不足以判断二者是否存在其他直接关联。",
+      "graph_context": "[图谱路径]\n命中实体: 傅秋涛、赵一曼\n叶挺 --(战友)--> 傅秋涛\n赵一曼 --(战友)--> 叶挺",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确指出了通过叶挺的间接路径，实体、关系（战友）及连接顺序与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确指出了通过叶挺的间接路径，实体、关系（战友）及连接顺序与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-045",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅雷与夏伊乔之间的关系链是什么？",
+      "answer": "傅雷 --(好友)--> 刘海粟 --(妻子)--> 夏伊乔",
+      "expected_entities": [
+        "傅雷",
+        "刘海粟",
+        "夏伊乔"
+      ],
+      "expected_relations": [
+        "好友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅雷",
+          "relation": "好友",
+          "target": "刘海粟"
+        },
+        {
+          "source": "刘海粟",
+          "relation": "妻子",
+          "target": "夏伊乔"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅雷与夏伊乔的关系链为：傅雷是刘海粟的好友，刘海粟的妻子是夏伊乔。",
+      "graph_context": "[图谱路径]\n命中实体: 傅雷、夏伊乔\n傅雷 --(好友)--> 刘海粟\n刘海粟 --(妻子)--> 夏伊乔",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "关系链、实体、关系及方向均与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "关系链、实体、关系及方向均与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-046",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出傅雷到刘玉范的图谱推理路径。",
+      "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 刘玉范",
+      "expected_entities": [
+        "傅雷",
+        "刘海粟",
+        "刘玉范"
+      ],
+      "expected_relations": [
+        "好友",
+        "学生"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅雷",
+          "relation": "好友",
+          "target": "刘海粟"
+        },
+        {
+          "source": "刘海粟",
+          "relation": "学生",
+          "target": "刘玉范"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅雷到刘玉范的推理路径为：\n**傅雷 --(好友)--> 刘海粟 --(学生)--> 刘玉范**",
+      "graph_context": "[图谱路径]\n命中实体: 傅雷、刘玉范\n傅雷 --(好友)--> 刘海粟\n刘海粟 --(学生)--> 刘玉范",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-047",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅雷和姜国华能否通过图谱中的两跳关系关联起来？",
+      "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 姜国华",
+      "expected_entities": [
+        "傅雷",
+        "刘海粟",
+        "姜国华"
+      ],
+      "expected_relations": [
+        "好友",
+        "学生"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅雷",
+          "relation": "好友",
+          "target": "刘海粟"
+        },
+        {
+          "source": "刘海粟",
+          "relation": "学生",
+          "target": "姜国华"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，傅雷与刘海粟为好友，刘海粟是姜国华的学生，两者可通过“傅雷→刘海粟→姜国华”的两跳路径关联。",
+      "graph_context": "[图谱路径]\n命中实体: 傅雷、姜国华\n傅雷 --(好友)--> 刘海粟\n刘海粟 --(学生)--> 姜国华",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两跳路径及实体、关系方向，与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两跳路径及实体、关系方向，与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-048",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅雷和张旭云之间存在怎样的关系路径？",
+      "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 张旭云",
+      "expected_entities": [
+        "傅雷",
+        "刘海粟",
+        "张旭云"
+      ],
+      "expected_relations": [
+        "好友",
+        "学生"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅雷",
+          "relation": "好友",
+          "target": "刘海粟"
+        },
+        {
+          "source": "刘海粟",
+          "relation": "学生",
+          "target": "张旭云"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅雷与张旭云的关系路径为：**傅雷（好友）→ 刘海粟（学生）→ 张旭云**。",
+      "graph_context": "[图谱路径]\n命中实体: 傅雷、张旭云\n傅雷 --(好友)--> 刘海粟\n刘海粟 --(学生)--> 张旭云",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，实体、关系及路径方向均正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，实体、关系及路径方向均正确。"
+    },
+    {
+      "id": "kgqa-049",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅雷和潘玉良有什么关系？",
+      "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 潘玉良",
+      "expected_entities": [
+        "傅雷",
+        "刘海粟",
+        "潘玉良"
+      ],
+      "expected_relations": [
+        "好友",
+        "学生"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅雷",
+          "relation": "好友",
+          "target": "刘海粟"
+        },
+        {
+          "source": "刘海粟",
+          "relation": "学生",
+          "target": "潘玉良"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅雷与潘玉良无直接关系。两人仅通过刘海粟间接关联：傅雷是刘海粟的好友，刘海粟与潘玉良存在“学生”关系。若需确认直接关系，当前上下文不足以判断。",
+      "graph_context": "[图谱路径]\n命中实体: 傅雷、潘玉良\n傅雷 --(好友)--> 刘海粟\n刘海粟 --(学生)--> 潘玉良",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两人通过刘海粟的间接关系，实体、关系及路径方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两人通过刘海粟的间接关系，实体、关系及路径方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-050",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明傅雷和陆小曼之间的两跳关系。",
+      "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 陆小曼",
+      "expected_entities": [
+        "傅雷",
+        "刘海粟",
+        "陆小曼"
+      ],
+      "expected_relations": [
+        "好友",
+        "学生"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅雷",
+          "relation": "好友",
+          "target": "刘海粟"
+        },
+        {
+          "source": "刘海粟",
+          "relation": "学生",
+          "target": "陆小曼"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅雷与陆小曼的两跳关系为：**傅雷的好友是刘海粟，刘海粟的学生是陆小曼**。即两人通过“好友的师生关系”相连。",
+      "graph_context": "[图谱路径]\n命中实体: 傅雷、陆小曼\n傅雷 --(好友)--> 刘海粟\n刘海粟 --(学生)--> 陆小曼",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的两跳路径，实体、关系及方向均完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的两跳路径，实体、关系及方向均完全一致。"
+    },
+    {
+      "id": "kgqa-051",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "傅雷是通过什么路径连接到黄丽敏的？",
+      "answer": "傅雷 --(好友)--> 刘海粟 --(学生)--> 黄丽敏",
+      "expected_entities": [
+        "傅雷",
+        "刘海粟",
+        "黄丽敏"
+      ],
+      "expected_relations": [
+        "好友",
+        "学生"
+      ],
+      "evidence_path": [
+        {
+          "source": "傅雷",
+          "relation": "好友",
+          "target": "刘海粟"
+        },
+        {
+          "source": "刘海粟",
+          "relation": "学生",
+          "target": "黄丽敏"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，傅雷与黄丽敏的连接路径为：傅雷 →（好友）→ 刘海粟 →（学生）→ 黄丽敏。",
+      "graph_context": "[图谱路径]\n命中实体: 傅雷、黄丽敏\n傅雷 --(好友)--> 刘海粟\n刘海粟 --(学生)--> 黄丽敏",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-052",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，关山月和宋铭黄之间有什么关联？",
+      "answer": "关山月 --(老师)--> 高剑父 --(妻子)--> 宋铭黄",
+      "expected_entities": [
+        "关山月",
+        "高剑父",
+        "宋铭黄"
+      ],
+      "expected_relations": [
+        "老师",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "关山月",
+          "relation": "老师",
+          "target": "高剑父"
+        },
+        {
+          "source": "高剑父",
+          "relation": "妻子",
+          "target": "宋铭黄"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，关山月的老师是高剑父，高剑父的妻子是宋铭黄。因此，宋铭黄是关山月老师的妻子（师母），两者通过高剑父形成间接关联。",
+      "graph_context": "[图谱路径]\n命中实体: 关山月、宋铭黄\n关山月 --(老师)--> 高剑父\n高剑父 --(妻子)--> 宋铭黄",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确复现了标准答案的图谱路径，实体、关系及方向完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确复现了标准答案的图谱路径，实体、关系及方向完全一致。"
+    },
+    {
+      "id": "kgqa-053",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "关山月与杨之光之间的关系链是什么？",
+      "answer": "关山月 --(老师)--> 高剑父 --(学生)--> 杨之光",
+      "expected_entities": [
+        "关山月",
+        "高剑父",
+        "杨之光"
+      ],
+      "expected_relations": [
+        "老师",
+        "学生"
+      ],
+      "evidence_path": [
+        {
+          "source": "关山月",
+          "relation": "老师",
+          "target": "高剑父"
+        },
+        {
+          "source": "高剑父",
+          "relation": "学生",
+          "target": "杨之光"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，关山月与杨之光的关系链为：**关山月 →（老师）→ 高剑父 →（学生）→ 杨之光**。即两人同为高剑父门下弟子，属同门师兄弟关系。",
+      "graph_context": "[图谱路径]\n命中实体: 关山月、杨之光\n关山月 --(老师)--> 高剑父\n高剑父 --(学生)--> 杨之光",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的关系链实体、关系及方向与标准答案完全一致，准确表达了关山月-老师-高剑父-学生-杨之光的路径。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的关系链实体、关系及方向与标准答案完全一致，准确表达了关山月-老师-高剑父-学生-杨之光的路径。"
+    },
+    {
+      "id": "kgqa-054",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出关山月到黎雄才的图谱推理路径。",
+      "answer": "关山月 --(老师)--> 高剑父 --(学生)--> 黎雄才",
+      "expected_entities": [
+        "关山月",
+        "高剑父",
+        "黎雄才"
+      ],
+      "expected_relations": [
+        "老师",
+        "学生"
+      ],
+      "evidence_path": [
+        {
+          "source": "关山月",
+          "relation": "老师",
+          "target": "高剑父"
+        },
+        {
+          "source": "高剑父",
+          "relation": "学生",
+          "target": "黎雄才"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，关山月到黎雄才的推理路径为：\n**关山月 --(老师)--> 高剑父 --(学生)--> 黎雄才**",
+      "graph_context": "[图谱路径]\n命中实体: 关山月、黎雄才\n关山月 --(老师)--> 高剑父\n高剑父 --(学生)--> 黎雄才",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-055",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "关山月和高剑僧能否通过图谱中的两跳关系关联起来？",
+      "answer": "关山月 --(老师)--> 高剑父 --(弟弟)--> 高剑僧",
+      "expected_entities": [
+        "关山月",
+        "高剑父",
+        "高剑僧"
+      ],
+      "expected_relations": [
+        "老师",
+        "弟弟"
+      ],
+      "evidence_path": [
+        {
+          "source": "关山月",
+          "relation": "老师",
+          "target": "高剑父"
+        },
+        {
+          "source": "高剑父",
+          "relation": "弟弟",
+          "target": "高剑僧"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，关山月与高剑父存在“老师”关系（第一跳），高剑父与高剑僧存在“弟弟”关系（第二跳），因此两者可通过“关山月→高剑父→高剑僧”的两跳路径关联起来。",
+      "graph_context": "[图谱路径]\n命中实体: 关山月、高剑僧\n关山月 --(老师)--> 高剑父\n高剑父 --(弟弟)--> 高剑僧",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两跳路径中的实体、关系及方向，与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两跳路径中的实体、关系及方向，与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-056",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "关山月和高奇峰之间存在怎样的关系路径？",
+      "answer": "关山月 --(老师)--> 高剑父 --(弟弟)--> 高奇峰",
+      "expected_entities": [
+        "关山月",
+        "高剑父",
+        "高奇峰"
+      ],
+      "expected_relations": [
+        "老师",
+        "弟弟"
+      ],
+      "evidence_path": [
+        {
+          "source": "关山月",
+          "relation": "老师",
+          "target": "高剑父"
+        },
+        {
+          "source": "高剑父",
+          "relation": "弟弟",
+          "target": "高奇峰"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，关山月与高奇峰的关系路径为：**关山月 →（老师）→ 高剑父 →（弟弟）→ 高奇峰**。即关山月的老师是高剑父，高剑父的弟弟是高奇峰，两者通过高剑父建立关联。",
+      "graph_context": "[图谱路径]\n命中实体: 关山月、高奇峰\n关山月 --(老师)--> 高剑父\n高剑父 --(弟弟)--> 高奇峰",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，实体、关系及方向均正确无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，实体、关系及方向均正确无误。"
+    },
+    {
+      "id": "kgqa-057",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "关山月和居廉有什么关系？",
+      "answer": "关山月 --(老师)--> 高剑父 --(老师)--> 居廉",
+      "expected_entities": [
+        "关山月",
+        "高剑父",
+        "居廉"
+      ],
+      "expected_relations": [
+        "老师",
+        "老师"
+      ],
+      "evidence_path": [
+        {
+          "source": "关山月",
+          "relation": "老师",
+          "target": "高剑父"
+        },
+        {
+          "source": "高剑父",
+          "relation": "老师",
+          "target": "居廉"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，关山月的老师是高剑父，高剑父的老师是居廉。因此，居廉是关山月的师祖（太老师），关山月是居廉的徒孙（再传弟子），二者属于隔代师徒传承关系。",
+      "graph_context": "[图谱路径]\n命中实体: 关山月、居廉\n关山月 --(老师)--> 高剑父\n高剑父 --(老师)--> 居廉",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了图谱路径，实体、关系及方向均与标准答案完全一致，并正确推导出隔代师徒传承关系。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了图谱路径，实体、关系及方向均与标准答案完全一致，并正确推导出隔代师徒传承关系。"
+    },
+    {
+      "id": "kgqa-058",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明刘亚楼和粟寒生之间的两跳关系。",
+      "answer": "刘亚楼 --(战友)--> 粟裕 --(儿子)--> 粟寒生",
+      "expected_entities": [
+        "刘亚楼",
+        "粟裕",
+        "粟寒生"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "粟裕"
+        },
+        {
+          "source": "粟裕",
+          "relation": "儿子",
+          "target": "粟寒生"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与粟寒生的两跳关系为：**刘亚楼是粟寒生父亲（粟裕）的战友**。\n具体路径：刘亚楼 --(战友)--> 粟裕 --(儿子)--> 粟寒生。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、粟寒生\n刘亚楼 --(战友)--> 粟裕\n粟裕 --(儿子)--> 粟寒生",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，准确给出了两跳路径及中间实体，实体、关系和方向均无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，准确给出了两跳路径及中间实体，实体、关系和方向均无误。"
+    },
+    {
+      "id": "kgqa-059",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼是通过什么路径连接到粟戎生的？",
+      "answer": "刘亚楼 --(战友)--> 粟裕 --(儿子)--> 粟戎生",
+      "expected_entities": [
+        "刘亚楼",
+        "粟裕",
+        "粟戎生"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "粟裕"
+        },
+        {
+          "source": "粟裕",
+          "relation": "儿子",
+          "target": "粟戎生"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与粟戎生的连接路径为：**刘亚楼 ——(战友)——> 粟裕 ——(儿子)——> 粟戎生**。即刘亚楼是粟裕的战友，粟裕是粟戎生的父亲。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、粟戎生\n刘亚楼 --(战友)--> 粟裕\n粟裕 --(儿子)--> 粟戎生",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-060",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，刘亚楼和楚青之间有什么关联？",
+      "answer": "刘亚楼 --(战友)--> 粟裕 --(妻子)--> 楚青",
+      "expected_entities": [
+        "刘亚楼",
+        "粟裕",
+        "楚青"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "粟裕"
+        },
+        {
+          "source": "粟裕",
+          "relation": "妻子",
+          "target": "楚青"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与楚青的关联为：**刘亚楼是楚青丈夫（粟裕）的战友**。两者通过粟裕间接相连（刘亚楼与粟裕为战友关系，楚青为粟裕的妻子）。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、楚青\n刘亚楼 --(战友)--> 粟裕\n粟裕 --(妻子)--> 楚青",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及连接方向完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及连接方向完全一致。"
+    },
+    {
+      "id": "kgqa-061",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼与刘伯承之间的关系链是什么？",
+      "answer": "刘亚楼 --(战友)--> 粟裕 --(战友)--> 刘伯承",
+      "expected_entities": [
+        "刘亚楼",
+        "粟裕",
+        "刘伯承"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "粟裕"
+        },
+        {
+          "source": "粟裕",
+          "relation": "战友",
+          "target": "刘伯承"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与刘伯承的关系链为：刘亚楼 --(战友)--> 陈毅 --(战友)--> 刘伯承。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、刘伯承\n刘亚楼 --(战友)--> 陈毅\n刘伯承 --(战友)--> 陈毅",
+      "judge_result": {
+        "is_correct": false,
+        "score": 0,
+        "reason": "模型回答的中间实体为“陈毅”，与标准答案及证据路径中的“粟裕”不符，关系链错误。"
+      },
+      "is_correct": false,
+      "score": 0,
+      "reason": "模型回答的中间实体为“陈毅”，与标准答案及证据路径中的“粟裕”不符，关系链错误。"
+    },
+    {
+      "id": "kgqa-062",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出刘亚楼到朱德的图谱推理路径。",
+      "answer": "刘亚楼 --(战友)--> 粟裕 --(战友)--> 朱德",
+      "expected_entities": [
+        "刘亚楼",
+        "粟裕",
+        "朱德"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "粟裕"
+        },
+        {
+          "source": "粟裕",
+          "relation": "战友",
+          "target": "朱德"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼到朱德的推理路径为：\n**刘亚楼 --(战友)--> 粟裕 <--(战友)-- 朱德**",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、朱德\n刘亚楼 --(战友)--> 粟裕\n朱德 --(战友)--> 粟裕",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型提供的JSON证据路径与标准答案完全一致，实体、关系及方向均正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型提供的JSON证据路径与标准答案完全一致，实体、关系及方向均正确。"
+    },
+    {
+      "id": "kgqa-063",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼和陈毅能否通过图谱中的两跳关系关联起来？",
+      "answer": "刘亚楼 --(战友)--> 粟裕 --(战友)--> 陈毅",
+      "expected_entities": [
+        "刘亚楼",
+        "粟裕",
+        "陈毅"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "粟裕"
+        },
+        {
+          "source": "粟裕",
+          "relation": "战友",
+          "target": "陈毅"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "不能。根据提供的图谱上下文，刘亚楼与陈毅之间仅存在一条直接的一跳关系（战友），未包含任何中间实体或路径信息，因此不足以判断二者是否存在两跳关联。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、陈毅\n刘亚楼 --(战友)--> 陈毅",
+      "judge_result": {
+        "is_correct": false,
+        "score": 0,
+        "reason": "模型结论错误地回答“不能”并声称仅有一跳关系，与标准答案明确的两跳路径事实完全矛盾；尽管附带的证据路径正确，但核心回答判定为错误。"
+      },
+      "is_correct": false,
+      "score": 0,
+      "reason": "模型结论错误地回答“不能”并声称仅有一跳关系，与标准答案明确的两跳路径事实完全矛盾；尽管附带的证据路径正确，但核心回答判定为错误。"
+    },
+    {
+      "id": "kgqa-064",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼和陈丹淮之间存在怎样的关系路径？",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(儿子)--> 陈丹淮",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "陈丹淮"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "儿子",
+          "target": "陈丹淮"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与陈丹淮的关系路径为：**刘亚楼 --(战友)--> 陈毅 --(儿子)--> 陈丹淮**。即刘亚楼与陈丹淮的父亲陈毅是战友关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、陈丹淮\n刘亚楼 --(战友)--> 陈毅\n陈毅 --(儿子)--> 陈丹淮",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案的路径、实体及关系方向完全一致，准确还原了图谱事实。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案的路径、实体及关系方向完全一致，准确还原了图谱事实。"
+    },
+    {
+      "id": "kgqa-065",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼和陈小鲁有什么关系？",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(儿子)--> 陈小鲁",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "陈小鲁"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "儿子",
+          "target": "陈小鲁"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼是陈小鲁父亲（陈毅）的战友。两者为间接关联关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、陈小鲁\n刘亚楼 --(战友)--> 陈毅\n陈毅 --(儿子)--> 陈小鲁",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答完整且准确地复现了标准答案的图谱路径、实体及关系方向，逻辑一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答完整且准确地复现了标准答案的图谱路径、实体及关系方向，逻辑一致。"
+    },
+    {
+      "id": "kgqa-066",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明刘亚楼和陈昊苏之间的两跳关系。",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(儿子)--> 陈昊苏",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "陈昊苏"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "儿子",
+          "target": "陈昊苏"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与陈昊苏的两跳关系路径为：**刘亚楼 ——(战友)——> 陈毅 ——(儿子)——> 陈昊苏**。即刘亚楼是陈昊苏父亲（陈毅）的战友。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、陈昊苏\n刘亚楼 --(战友)--> 陈毅\n陈毅 --(儿子)--> 陈昊苏",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致，准确表达了刘亚楼到陈昊苏的两跳关系。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致，准确表达了刘亚楼到陈昊苏的两跳关系。"
+    },
+    {
+      "id": "kgqa-067",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼是通过什么路径连接到陈珊珊的？",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(女儿)--> 陈珊珊",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "陈珊珊"
+      ],
+      "expected_relations": [
+        "战友",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "女儿",
+          "target": "陈珊珊"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与陈珊珊的连接路径为：\n**刘亚楼 --(战友)--> 陈毅 --(女儿)--> 陈珊珊**\n即刘亚楼先通过“战友”关系关联至陈毅，陈毅再通过“女儿”关系关联至陈珊珊。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、陈珊珊\n刘亚楼 --(战友)--> 陈毅\n陈毅 --(女儿)--> 陈珊珊",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-068",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，刘亚楼和胡兰畦之间有什么关联？",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(好友)--> 胡兰畦",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "胡兰畦"
+      ],
+      "expected_relations": [
+        "战友",
+        "好友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "好友",
+          "target": "胡兰畦"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据提供的知识图谱上下文，刘亚楼与胡兰畦之间**没有直接关联**。两者仅通过共同实体“陈毅”间接相连（刘亚楼为陈毅的战友，胡兰畦为陈毅的好友）。基于当前图谱路径，不足以判断二者是否存在其他直接关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、胡兰畦\n刘亚楼 --(战友)--> 陈毅\n胡兰畦 --(好友)--> 陈毅",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向均完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向均完全一致。"
+    },
+    {
+      "id": "kgqa-069",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼与张茜之间的关系链是什么？",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(妻子)--> 张茜",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "张茜"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "妻子",
+          "target": "张茜"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与张茜的关系链为：**刘亚楼 —(战友)→ 陈毅 —(妻子)→ 张茜**。即：刘亚楼的战友是陈毅，陈毅的妻子是张茜。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、张茜\n刘亚楼 --(战友)--> 陈毅\n陈毅 --(妻子)--> 张茜",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，实体、关系及方向均准确无误，完整表达了相同的路径。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，实体、关系及方向均准确无误，完整表达了相同的路径。"
+    },
+    {
+      "id": "kgqa-070",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出刘亚楼到肖菊英的图谱推理路径。",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(妻子)--> 肖菊英",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "肖菊英"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "妻子",
+          "target": "肖菊英"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼到肖菊英的推理路径为：\n**刘亚楼 --(战友)--> 陈毅 --(妻子)--> 肖菊英**",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、肖菊英\n刘亚楼 --(战友)--> 陈毅\n陈毅 --(妻子)--> 肖菊英",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体及关系方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体及关系方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-071",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼和赖月明能否通过图谱中的两跳关系关联起来？",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(妻子)--> 赖月明",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "赖月明"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "妻子",
+          "target": "赖月明"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，刘亚楼与陈毅为战友关系，陈毅与赖月明为夫妻关系，两者可通过“刘亚楼→战友→陈毅→妻子→赖月明”的两跳路径关联。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、赖月明\n刘亚楼 --(战友)--> 陈毅\n陈毅 --(妻子)--> 赖月明",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两跳路径（刘亚楼→战友→陈毅→妻子→赖月明），实体、关系及方向均与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两跳路径（刘亚楼→战友→陈毅→妻子→赖月明），实体、关系及方向均与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-072",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼和刘伯承之间存在怎样的关系路径？",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(战友)--> 刘伯承",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "刘伯承"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "战友",
+          "target": "刘伯承"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与刘伯承的关系路径为：**刘亚楼 --(战友)--> 陈毅 <--(战友)-- 刘伯承**。即两人均与陈毅存在战友关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、刘伯承\n刘亚楼 --(战友)--> 陈毅\n刘伯承 --(战友)--> 陈毅",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径结构、实体、关系及方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径结构、实体、关系及方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-073",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘亚楼和粟裕有什么关系？",
+      "answer": "刘亚楼 --(战友)--> 陈毅 --(战友)--> 粟裕",
+      "expected_entities": [
+        "刘亚楼",
+        "陈毅",
+        "粟裕"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘亚楼",
+          "relation": "战友",
+          "target": "陈毅"
+        },
+        {
+          "source": "陈毅",
+          "relation": "战友",
+          "target": "粟裕"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘亚楼与粟裕是战友关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘亚楼、粟裕\n刘亚楼 --(战友)--> 粟裕",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确复现了标准答案的图谱路径，实体、关系及连接顺序完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确复现了标准答案的图谱路径，实体、关系及连接顺序完全一致。"
+    },
+    {
+      "id": "kgqa-074",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明刘伯承和吴小兰之间的两跳关系。",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(儿媳)--> 吴小兰",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "吴小兰"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿媳"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "儿媳",
+          "target": "吴小兰"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与吴小兰通过中间实体“叶剑英”构成两跳关系：\n\n**关系路径**：刘伯承 ←(战友)→ 叶剑英 ←(儿媳)→ 吴小兰  \n**关系说明**：刘伯承与叶剑英为战友关系，吴小兰为叶剑英的儿媳。因此，两人的两跳关系可明确表述为：**吴小兰是刘伯承战友的儿媳**。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、吴小兰\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(儿媳)--> 吴小兰",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了中间实体叶剑英，关系路径及方向与标准答案完全一致，事实表述正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了中间实体叶剑英，关系路径及方向与标准答案完全一致，事实表述正确。"
+    },
+    {
+      "id": "kgqa-075",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承是通过什么路径连接到叶选宁的？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(儿子)--> 叶选宁",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶选宁"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "儿子",
+          "target": "叶选宁"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与叶选宁通过共同节点**叶剑英**连接。具体路径为：**刘伯承 ←(战友)→ 叶剑英 ←(儿子)→ 叶选宁**（即刘伯承与叶剑英为战友关系，叶剑英是叶选宁的父亲）。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶选宁\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(儿子)--> 叶选宁",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了中间实体叶剑英，关系链及方向与标准答案完全一致，事实正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了中间实体叶剑英，关系链及方向与标准答案完全一致，事实正确。"
+    },
+    {
+      "id": "kgqa-076",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，刘伯承和叶选平之间有什么关联？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(儿子)--> 叶选平",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶选平"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "儿子",
+          "target": "叶选平"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与叶选平无直接关联。二者通过叶剑英存在间接联系：刘伯承是叶剑英的战友，叶剑英是叶选平的父亲。即刘伯承为叶选平父亲的战友。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶选平\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(儿子)--> 叶选平",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向均一致，对间接关联的解释清晰完整。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的图谱路径，实体、关系及方向均一致，对间接关联的解释清晰完整。"
+    },
+    {
+      "id": "kgqa-077",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承与叶选廉之间的关系链是什么？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(儿子)--> 叶选廉",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶选廉"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "儿子",
+          "target": "叶选廉"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与叶选廉的关系链为：\n**刘伯承 —(战友)— 叶剑英 —(父子/儿子)— 叶选廉**\n（即：刘伯承与叶剑英是战友关系，叶选廉是叶剑英的儿子。）",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶选廉\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(儿子)--> 叶选廉",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的关系路径，实体、关系及方向均一致，解释清晰无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的关系路径，实体、关系及方向均一致，解释清晰无误。"
+    },
+    {
+      "id": "kgqa-078",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出刘伯承到叶向真的图谱推理路径。",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(女儿)--> 叶向真",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶向真"
+      ],
+      "expected_relations": [
+        "战友",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "女儿",
+          "target": "叶向真"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，推理路径为：\n**刘伯承 --(战友)--> 叶剑英 --(父亲)--> 叶向真**\n（说明：依据给定边“叶剑英--(战友)-->刘伯承”与“叶剑英--(女儿)-->叶向真”，沿战友关系反向连接至叶剑英，再经父女关系正向到达叶向真。）",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶向真\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(女儿)--> 叶向真",
+      "judge_result": {
+        "is_correct": true,
+        "score": 90,
+        "reason": "证据路径与标准答案完全一致，推理正确。主路径中的‘父亲’为‘女儿’关系的表述差异，未改变实体、方向与事实。"
+      },
+      "is_correct": true,
+      "score": 90,
+      "reason": "证据路径与标准答案完全一致，推理正确。主路径中的‘父亲’为‘女儿’关系的表述差异，未改变实体、方向与事实。"
+    },
+    {
+      "id": "kgqa-079",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和叶楚梅能否通过图谱中的两跳关系关联起来？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(女儿)--> 叶楚梅",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶楚梅"
+      ],
+      "expected_relations": [
+        "战友",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "女儿",
+          "target": "叶楚梅"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "可以关联。根据图谱上下文，刘伯承与叶剑英存在“战友”关系，叶剑英与叶楚梅存在“女儿”关系。两者可通过中间实体叶剑英形成**刘伯承—战友—叶剑英—女儿—叶楚梅**的两跳路径进行关联。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶楚梅\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(女儿)--> 叶楚梅",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两跳路径的实体、关系及方向，与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两跳路径的实体、关系及方向，与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-080",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和危拱之之间存在怎样的关系路径？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(妻子)--> 危拱之",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "危拱之"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "妻子",
+          "target": "危拱之"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与危拱之之间无直接关系，二者通过叶剑英形成间接关联。具体路径为：**刘伯承 ←(战友)→ 叶剑英 ←(夫妻)→ 危拱之**（即刘伯承与叶剑英为战友关系，危拱之为叶剑英妻子）。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、危拱之\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(妻子)--> 危拱之",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的关系路径，实体、关系类型及指向均完全一致，且提供的证据路径清晰无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的关系路径，实体、关系类型及指向均完全一致，且提供的证据路径清晰无误。"
+    },
+    {
+      "id": "kgqa-081",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和曾宪植有什么关系？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(妻子)--> 曾宪植",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "曾宪植"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "妻子",
+          "target": "曾宪植"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与曾宪植之间**无直接关系**。两者仅通过叶剑英产生间接关联：刘伯承是叶剑英的战友，曾宪植是叶剑英的妻子。基于当前上下文，**不足以判断**两人是否存在其他直接关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、曾宪植\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(妻子)--> 曾宪植",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确复现了标准答案中的图谱路径，实体、关系及方向均正确，清晰说明了两人通过叶剑英的间接关联。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确复现了标准答案中的图谱路径，实体、关系及方向均正确，清晰说明了两人通过叶剑英的间接关联。"
+    },
+    {
+      "id": "kgqa-082",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明刘伯承和叶明子之间的两跳关系。",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(孙女)--> 叶明子",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶明子"
+      ],
+      "expected_relations": [
+        "战友",
+        "孙女"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "孙女",
+          "target": "叶明子"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与叶明子之间通过叶剑英构成两跳关系：**叶剑英与刘伯承为战友关系，且叶剑英是叶明子的祖父（即叶明子是叶剑英的孙女）**。据此可概括为：刘伯承与叶明子的祖父系战友关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶明子\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(孙女)--> 叶明子",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确指出了中间实体叶剑英，关系链与标准答案完全一致，实体、关系及方向均无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确指出了中间实体叶剑英，关系链与标准答案完全一致，实体、关系及方向均无误。"
+    },
+    {
+      "id": "kgqa-083",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承是通过什么路径连接到叶晴晴的？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(孙女)--> 叶晴晴",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶晴晴"
+      ],
+      "expected_relations": [
+        "战友",
+        "孙女"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "孙女",
+          "target": "叶晴晴"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与叶晴晴通过**叶剑英**连接。具体路径为：刘伯承是叶剑英的战友，叶晴晴是叶剑英的孙女。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶晴晴\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(孙女)--> 叶晴晴",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案完全一致，准确还原了实体、关系方向及完整连接路径。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案完全一致，准确还原了实体、关系方向及完整连接路径。"
+    },
+    {
+      "id": "kgqa-084",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，刘伯承和叶静子之间有什么关联？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(孙女)--> 叶静子",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶静子"
+      ],
+      "expected_relations": [
+        "战友",
+        "孙女"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "孙女",
+          "target": "叶静子"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与叶静子的关联为：刘伯承是叶静子祖父（叶剑英）的战友。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶静子\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(孙女)--> 叶静子",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的知识图谱路径，实体、关系及方向完全一致，且提供了正确的证据链。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的知识图谱路径，实体、关系及方向完全一致，且提供了正确的证据链。"
+    },
+    {
+      "id": "kgqa-085",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承与宋时轮之间的关系链是什么？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(战友)--> 宋时轮",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "宋时轮"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "战友",
+          "target": "宋时轮"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与宋时轮之间的关系链为：**刘伯承 ←(战友)─ 叶剑英 ←(战友)─ 宋时轮**。两人均与叶剑英存在战友关系，由此形成关联链。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、宋时轮\n叶剑英 --(战友)--> 刘伯承\n宋时轮 --(战友)--> 叶剑英",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型提供的证据路径与标准答案完全一致，实体、关系及连接顺序正确，文本箭头方向仅为表述差异，不影响事实判断。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型提供的证据路径与标准答案完全一致，实体、关系及连接顺序正确，文本箭头方向仅为表述差异，不影响事实判断。"
+    },
+    {
+      "id": "kgqa-086",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出刘伯承到郭天民的图谱推理路径。",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(战友)--> 郭天民",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "郭天民"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "战友",
+          "target": "郭天民"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承到郭天民的推理路径为：**刘伯承 ←(战友) 叶剑英 ←(战友) 郭天民**。\n（注：上下文给定关系方向为反向，基于“战友”关系的对称性，实际关联链条为刘伯承—叶剑英—郭天民。）",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、郭天民\n叶剑英 --(战友)--> 刘伯承\n郭天民 --(战友)--> 叶剑英",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "证据路径与标准答案完全一致，实体、关系及方向均正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "证据路径与标准答案完全一致，实体、关系及方向均正确。"
+    },
+    {
+      "id": "kgqa-087",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和叶钻祥能否通过图谱中的两跳关系关联起来？",
+      "answer": "刘伯承 --(战友)--> 叶剑英 --(父亲)--> 叶钻祥",
+      "expected_entities": [
+        "刘伯承",
+        "叶剑英",
+        "叶钻祥"
+      ],
+      "expected_relations": [
+        "战友",
+        "父亲"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "叶剑英"
+        },
+        {
+          "source": "叶剑英",
+          "relation": "父亲",
+          "target": "叶钻祥"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，刘伯承与叶剑英存在“战友”关系，叶剑英与叶钻祥存在“父亲”关系。两者可通过中间实体叶剑英构成两跳路径（刘伯承→叶剑英→叶钻祥）实现关联。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、叶钻祥\n叶剑英 --(战友)--> 刘伯承\n叶剑英 --(父亲)--> 叶钻祥",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两跳路径及中间实体，实体、关系和方向均与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两跳路径及中间实体，实体、关系和方向均与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-088",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和刘坤模之间存在怎样的关系路径？",
+      "answer": "刘伯承 --(战友)--> 彭德怀 --(妻子)--> 刘坤模",
+      "expected_entities": [
+        "刘伯承",
+        "彭德怀",
+        "刘坤模"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "彭德怀"
+        },
+        {
+          "source": "彭德怀",
+          "relation": "妻子",
+          "target": "刘坤模"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与刘坤模的关系路径为：**刘伯承 --(战友)--> 彭德怀 --(妻子)--> 刘坤模**。即刘坤模是刘伯承战友（彭德怀）的妻子。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、刘坤模\n刘伯承 --(战友)--> 彭德怀\n彭德怀 --(妻子)--> 刘坤模",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案的路径、实体及关系完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案的路径、实体及关系完全一致。"
+    },
+    {
+      "id": "kgqa-089",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和浦安修有什么关系？",
+      "answer": "刘伯承 --(战友)--> 彭德怀 --(妻子)--> 浦安修",
+      "expected_entities": [
+        "刘伯承",
+        "彭德怀",
+        "浦安修"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "彭德怀"
+        },
+        {
+          "source": "彭德怀",
+          "relation": "妻子",
+          "target": "浦安修"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与浦安修无直接关系。二者通过彭德怀形成间接关联：刘伯承是彭德怀的战友，而彭德怀是浦安修的丈夫，即刘伯承是浦安修丈夫的战友。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、浦安修\n刘伯承 --(战友)--> 彭德怀\n浦安修 --(丈夫)--> 彭德怀",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确指出了间接关联路径，实体、关系及方向与标准答案完全一致，证据链正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确指出了间接关联路径，实体、关系及方向与标准答案完全一致，证据链正确。"
+    },
+    {
+      "id": "kgqa-090",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明刘伯承和彭荣华之间的两跳关系。",
+      "answer": "刘伯承 --(战友)--> 彭德怀 --(弟弟)--> 彭荣华",
+      "expected_entities": [
+        "刘伯承",
+        "彭德怀",
+        "彭荣华"
+      ],
+      "expected_relations": [
+        "战友",
+        "弟弟"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "彭德怀"
+        },
+        {
+          "source": "彭德怀",
+          "relation": "弟弟",
+          "target": "彭荣华"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与彭荣华之间的两跳关系路径为：**刘伯承 →（战友）→ 彭德怀 →（弟弟）→ 彭荣华**。\n\n具体而言：刘伯承与彭德怀为战友关系，彭德怀的弟弟是彭荣华。两人无直接关联，仅通过彭德怀形成间接的两跳关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、彭荣华\n刘伯承 --(战友)--> 彭德怀\n彭德怀 --(弟弟)--> 彭荣华",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致，准确表达了两跳关系。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体、关系及方向与标准答案完全一致，准确表达了两跳关系。"
+    },
+    {
+      "id": "kgqa-091",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承是通过什么路径连接到彭金华的？",
+      "answer": "刘伯承 --(战友)--> 彭德怀 --(弟弟)--> 彭金华",
+      "expected_entities": [
+        "刘伯承",
+        "彭德怀",
+        "彭金华"
+      ],
+      "expected_relations": [
+        "战友",
+        "弟弟"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "彭德怀"
+        },
+        {
+          "source": "彭德怀",
+          "relation": "弟弟",
+          "target": "彭金华"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，连接路径为：**刘伯承 -(战友)-> 彭德怀 -(弟弟)-> 彭金华**。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、彭金华\n刘伯承 --(战友)--> 彭德怀\n彭德怀 --(弟弟)--> 彭金华",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案的路径、实体、关系及方向完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案的路径、实体、关系及方向完全一致。"
+    },
+    {
+      "id": "kgqa-092",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，刘伯承和钟伟之间有什么关联？",
+      "answer": "刘伯承 --(战友)--> 彭德怀 --(战友)--> 钟伟",
+      "expected_entities": [
+        "刘伯承",
+        "彭德怀",
+        "钟伟"
+      ],
+      "expected_relations": [
+        "战友",
+        "战友"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "彭德怀"
+        },
+        {
+          "source": "彭德怀",
+          "relation": "战友",
+          "target": "钟伟"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据提供的知识图谱上下文，刘伯承与钟伟之间**无直接关联**。但二者均与彭德怀存在“战友”关系（即刘伯承—战友→彭德怀，钟伟—战友→彭德怀）。当前上下文不足以判断二者是否存在其他直接关联。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、钟伟\n刘伯承 --(战友)--> 彭德怀\n钟伟 --(战友)--> 彭德怀",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确识别出刘伯承与钟伟无直接关联，但正确给出了通过彭德怀连接的完整多跳路径，实体、关系及方向均与标准答案一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确识别出刘伯承与钟伟无直接关联，但正确给出了通过彭德怀连接的完整多跳路径，实体、关系及方向均与标准答案一致。"
+    },
+    {
+      "id": "kgqa-093",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承与赵力平之间的关系链是什么？",
+      "answer": "刘伯承 --(战友)--> 朱德 --(儿媳)--> 赵力平",
+      "expected_entities": [
+        "刘伯承",
+        "朱德",
+        "赵力平"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿媳"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "儿媳",
+          "target": "赵力平"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "依据图谱上下文，刘伯承与赵力平的关系链为：**刘伯承 —（战友）— 朱德 —（儿媳/公公）— 赵力平**。即两人通过朱德建立关联：刘伯承与朱德为战友关系，赵力平为朱德的儿媳。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、赵力平\n朱德 --(战友)--> 刘伯承\n朱德 --(儿媳)--> 赵力平",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确复现了标准答案的关系链，实体、关系及方向完全一致，仅补充了“公公”作为辅助说明，不影响核心事实判定。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确复现了标准答案的关系链，实体、关系及方向完全一致，仅补充了“公公”作为辅助说明，不影响核心事实判定。"
+    },
+    {
+      "id": "kgqa-094",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请给出刘伯承到朱琦的图谱推理路径。",
+      "answer": "刘伯承 --(战友)--> 朱德 --(儿子)--> 朱琦",
+      "expected_entities": [
+        "刘伯承",
+        "朱德",
+        "朱琦"
+      ],
+      "expected_relations": [
+        "战友",
+        "儿子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "儿子",
+          "target": "朱琦"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "刘伯承 --(战友)--> 朱德 --(儿子)--> 朱琦。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、朱琦\n朱德 --(战友)--> 刘伯承\n朱德 --(儿子)--> 朱琦",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答与标准答案及证据路径完全一致，实体、关系和方向均正确无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答与标准答案及证据路径完全一致，实体、关系和方向均正确无误。"
+    },
+    {
+      "id": "kgqa-095",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和朱敏能否通过图谱中的两跳关系关联起来？",
+      "answer": "刘伯承 --(战友)--> 朱德 --(女儿)--> 朱敏",
+      "expected_entities": [
+        "刘伯承",
+        "朱德",
+        "朱敏"
+      ],
+      "expected_relations": [
+        "战友",
+        "女儿"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "女儿",
+          "target": "朱敏"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "能。根据图谱上下文，刘伯承与朱德存在“战友”关系，朱德与朱敏存在“女儿”关系，两者可通过共同实体“朱德”构成“刘伯承—朱德—朱敏”的两跳关联路径。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、朱敏\n朱德 --(战友)--> 刘伯承\n朱德 --(女儿)--> 朱敏",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了两跳路径及中间实体，关系方向与标准答案完全一致。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了两跳路径及中间实体，关系方向与标准答案完全一致。"
+    },
+    {
+      "id": "kgqa-096",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和刘铮之间存在怎样的关系路径？",
+      "answer": "刘伯承 --(战友)--> 朱德 --(女婿)--> 刘铮",
+      "expected_entities": [
+        "刘伯承",
+        "朱德",
+        "刘铮"
+      ],
+      "expected_relations": [
+        "战友",
+        "女婿"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "女婿",
+          "target": "刘铮"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与刘铮之间无直接边连接，但可通过朱德形成间接关系路径：\n\n**刘伯承 ←(战友)→ 朱德 ←(岳父)→ 刘铮** \n（即：刘伯承与朱德为战友关系，朱德是刘铮的岳父/刘铮是朱德的女婿）",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、刘铮\n朱德 --(战友)--> 刘伯承\n朱德 --(女婿)--> 刘铮",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确还原了标准答案的关系路径，实体、关系及连接顺序完全一致，逻辑清晰无误。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确还原了标准答案的关系路径，实体、关系及连接顺序完全一致，逻辑清晰无误。"
+    },
+    {
+      "id": "kgqa-097",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承和伍若兰有什么关系？",
+      "answer": "刘伯承 --(战友)--> 朱德 --(妻子)--> 伍若兰",
+      "expected_entities": [
+        "刘伯承",
+        "朱德",
+        "伍若兰"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "伍若兰"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据提供的图谱上下文，刘伯承与伍若兰之间无直接关系路径。两者仅通过朱德产生间接关联（刘伯承为朱德战友，伍若兰为朱德妻子）。基于当前信息，**不足以判断**两人的直接关系。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、伍若兰\n朱德 --(战友)--> 刘伯承\n朱德 --(妻子)--> 伍若兰",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确给出了与标准答案一致的图谱路径，实体、关系及方向完全匹配，正确说明了两人通过朱德的间接关联。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确给出了与标准答案一致的图谱路径，实体、关系及方向完全匹配，正确说明了两人通过朱德的间接关联。"
+    },
+    {
+      "id": "kgqa-098",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "请说明刘伯承和刘从珍之间的两跳关系。",
+      "answer": "刘伯承 --(战友)--> 朱德 --(妻子)--> 刘从珍",
+      "expected_entities": [
+        "刘伯承",
+        "朱德",
+        "刘从珍"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "刘从珍"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与刘从珍之间通过**朱德**构成两跳关系：\n- 第一跳：刘伯承与朱德为**战友**关系；\n- 第二跳：刘从珍为朱德的**妻子**。\n\n综上，两人的两跳关系可明确表述为：**刘从珍是刘伯承战友的妻子**（或刘伯承是刘从珍丈夫的战友）。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、刘从珍\n朱德 --(战友)--> 刘伯承\n朱德 --(妻子)--> 刘从珍",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答准确指出了中间实体朱德，关系链（刘伯承-战友-朱德-妻子-刘从珍）与标准答案完全一致，方向正确，逻辑清晰。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答准确指出了中间实体朱德，关系链（刘伯承-战友-朱德-妻子-刘从珍）与标准答案完全一致，方向正确，逻辑清晰。"
+    },
+    {
+      "id": "kgqa-099",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "刘伯承是通过什么路径连接到康克清的？",
+      "answer": "刘伯承 --(战友)--> 朱德 --(妻子)--> 康克清",
+      "expected_entities": [
+        "刘伯承",
+        "朱德",
+        "康克清"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "康克清"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，连接路径为：**刘伯承 —(战友)— 朱德 —(丈夫/夫妻关系)— 康克清**。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、康克清\n朱德 --(战友)--> 刘伯承\n康克清 --(丈夫)--> 朱德",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型回答的路径、实体及关系方向与标准答案完全一致，核心事实正确。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型回答的路径、实体及关系方向与标准答案完全一致，核心事实正确。"
+    },
+    {
+      "id": "kgqa-100",
+      "task_type": "multi_hop_path_reasoning",
+      "hop": 2,
+      "question": "在知识图谱中，刘伯承和萧菊芳之间有什么关联？",
+      "answer": "刘伯承 --(战友)--> 朱德 --(妻子)--> 萧菊芳",
+      "expected_entities": [
+        "刘伯承",
+        "朱德",
+        "萧菊芳"
+      ],
+      "expected_relations": [
+        "战友",
+        "妻子"
+      ],
+      "evidence_path": [
+        {
+          "source": "刘伯承",
+          "relation": "战友",
+          "target": "朱德"
+        },
+        {
+          "source": "朱德",
+          "relation": "妻子",
+          "target": "萧菊芳"
+        }
+      ],
+      "evaluation_hint": "???????????????????????????????????????????",
+      "model_answer": "根据图谱上下文，刘伯承与萧菊芳之间**无直接关联**。二者通过朱德间接相连：刘伯承是朱德的战友，萧菊芳是朱德的妻子。",
+      "graph_context": "[图谱路径]\n命中实体: 刘伯承、萧菊芳\n朱德 --(战友)--> 刘伯承\n朱德 --(妻子)--> 萧菊芳",
+      "judge_result": {
+        "is_correct": true,
+        "score": 100,
+        "reason": "模型准确指出了间接关联路径，实体、关系及方向与标准答案完全一致，并提供了正确的证据链。"
+      },
+      "is_correct": true,
+      "score": 100,
+      "reason": "模型准确指出了间接关联路径，实体、关系及方向与标准答案完全一致，并提供了正确的证据链。"
+    }
+  ]
+}
